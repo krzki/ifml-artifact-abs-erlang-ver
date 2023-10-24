@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="ASCII"?>
+<core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_U7mqIFOAEe6RN_2PvgwO2w">
+  <interactionFlowModel id="_aohJoFOAEe6RN_2PvgwO2w">
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_sOVw0FOAEe6RN_2PvgwO2w" name="PaymentLink" isLandmark="true">
+      <annotations text="PaymentLink"/>
+      <viewElementEvents id="_324hQFOAEe6RN_2PvgwO2w" name="ViewElement Event">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_5k3tEFOAEe6RN_2PvgwO2w" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0"/>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_D2Fca1e1Ee68M9yXchFBKQ" name="VirtualAccount">
+      <annotations text="VirtualAccount"/>
+      <viewElementEvents id="_LcPVWFe1Ee68M9yXchFBKQ">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_MXbLN1e1Ee68M9yXchFBKQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.0"/>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_VIYfu3JFEe6ZJrYp0Dvong" name="RetailOutlet">
+      <annotations text="RetailOutlet"/>
+      <viewElementEvents id="_aPhYiHJFEe6ZJrYp0Dvong">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_a2DNB3JFEe6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.0"/>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_II-YG3JHEe6ZJrYp0Dvong" name="DebitCard">
+      <annotations text="DebitCard"/>
+      <viewElementEvents id="_My8MuHJHEe6ZJrYp0Dvong">
+        <outInteractionFlows xsi:type="core:NavigationFlow" id="_N_4g93JHEe6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.0"/>
+      </viewElementEvents>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:ViewContainer" id="_aoq6oFOAEe6RN_2PvgwO2w" name="PaymentLink" isXOR="true">
+      <viewElements xsi:type="core:ViewContainer" id="_pM9DcFOAEe6RN_2PvgwO2w" name="PaymentLink Form" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElementEvents.0/@outInteractionFlows.0" isDefault="true">
+        <annotations text="/paymentlink"/>
+        <viewElements xsi:type="ext:Form" id="_vrt2oFOAEe6RN_2PvgwO2w" name="Payment Link Form">
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_RgZkEFedEe68M9yXchFBKQ" name="Kirim">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_maAawFeeEe68M9yXchFBKQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0">
+              <parameterBindingGroup id="_y-t4gleeEe68M9yXchFBKQ">
+                <parameterBindings id="_0HwkMleeEe68M9yXchFBKQ" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewElements.0/@viewComponentParts.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@parameters.0"/>
+                <parameterBindings id="_-nB_cFeeEe68M9yXchFBKQ" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewElements.0/@viewComponentParts.1" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@parameters.3"/>
+                <parameterBindings id="_Fzb7wlefEe68M9yXchFBKQ" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewElements.0/@viewComponentParts.2" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@parameters.4"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
+          </viewElementEvents>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_7pLuMFOAEe6RN_2PvgwO2w" name="Jumlah">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_eG44gFOBEe6RN_2PvgwO2w" name="amount">
+              <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </subViewComponentParts>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SimpleField" id="_SAJ6wFOCEe6RN_2PvgwO2w" name="Nama Pengirim">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_a5Ki0FOCEe6RN_2PvgwO2w" name="sender_name">
+              <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </subViewComponentParts>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </viewComponentParts>
+          <viewComponentParts xsi:type="ext:SelectionField" id="_4DkngFOCEe6RN_2PvgwO2w" name="Payment Gateway">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_2Xl_IFOIEe6RN_2PvgwO2w" name="product_name" direction="out"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_5Vrg4FOIEe6RN_2PvgwO2w" name="Midtrans"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_UI0MA1q3Ee68M9yXchFBKQ" name="Oy"/>
+          </viewComponentParts>
+        </viewElements>
+      </viewElements>
+      <viewElements xsi:type="core:ViewContainer" id="_NbstoFefEe68M9yXchFBKQ" name="Konfirmasi Payment Link Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@actionEvents.0/@outInteractionFlows.0">
+        <annotations text="/paymentlink/confirmation"/>
+        <viewElements xsi:type="ext:Details" id="_ozZekFefEe68M9yXchFBKQ" name="Konfirmasi Payment Link">
+          <parameters id="_ou4VgFegEe68M9yXchFBKQ" name="Data" direction="out"/>
+          <viewComponentParts xsi:type="core:DataBinding" id="_NZ0B0FegEe68M9yXchFBKQ" name="data">
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_Pb084FegEe68M9yXchFBKQ" name="Mohon selesaikan pembayaran di link berikut" featureConcept="//@domainModel/@domainElements.2"/>
+          </viewComponentParts>
+        </viewElements>
+      </viewElements>
+      <actions id="_WFBl0FedEe68M9yXchFBKQ" name="Paymentlink" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST "/>
+        <parameters id="_0jeFQFedEe68M9yXchFBKQ" name="amount"/>
+        <parameters id="_DQHf4FeeEe68M9yXchFBKQ" name="id"/>
+        <parameters id="_D6Oz4FeeEe68M9yXchFBKQ" name="paymentLink"/>
+        <parameters id="_FZm78FeeEe68M9yXchFBKQ" name="sender_name"/>
+        <parameters id="_ULwhoFeeEe68M9yXchFBKQ" name="product_name"/>
+        <parameters id="_YVJY4FeeEe68M9yXchFBKQ" name="data"/>
+        <actionEvents id="_L2ki4FefEe68M9yXchFBKQ" name="then">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_kP2lcFegEe68M9yXchFBKQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1">
+            <parameterBindingGroup id="_uSdS0legEe68M9yXchFBKQ">
+              <parameterBindings id="_u2gbElegEe68M9yXchFBKQ" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@parameters.5" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewElements.0/@parameters.0"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
+        </actionEvents>
+      </actions>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:ViewContainer" id="_LVUh3VhhEe68M9yXchFBKQ" name="VirtualAccount" isXOR="true">
+      <viewElements xsi:type="core:ViewContainer" id="_SUMYfFhhEe68M9yXchFBKQ" name="Virtual Account Form" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElementEvents.0/@outInteractionFlows.0" isDefault="true">
+        <annotations text="/virtualaccount"/>
+        <viewElements xsi:type="ext:Form" id="_8zOU71hhEe68M9yXchFBKQ" name="Virtual Account Form ">
+          <parameters xsi:type="ext:SimpleField" id="_AY2XxVhiEe68M9yXchFBKQ" name="Jumlah">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_HWFPo1hiEe68M9yXchFBKQ" name="amount">
+              <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </subViewComponentParts>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </parameters>
+          <parameters xsi:type="ext:SimpleField" id="_QQRjdVhiEe68M9yXchFBKQ" name="Nama Bank">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_S9glw1hiEe68M9yXchFBKQ" name="bank">
+              <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </subViewComponentParts>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </parameters>
+          <parameters xsi:type="ext:SelectionField" id="_e0FyNFhiEe68M9yXchFBKQ" name="Payment Gateway">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_k4wqY1hiEe68M9yXchFBKQ" name="Midtrans"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_t2HGJlq2Ee68M9yXchFBKQ" name="Oy"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_g_J7k1hiEe68M9yXchFBKQ" name="product_name" direction="out"/>
+          </parameters>
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_xioU-VhiEe68M9yXchFBKQ" name="Kirim">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_17-611hiEe68M9yXchFBKQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.5/@actions.0">
+              <parameterBindingGroup id="_PbPzclezEe68M9yXchFBKQ">
+                <parameterBindings id="_QNGuMlezEe68M9yXchFBKQ" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewElements.0/@viewComponentParts.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@parameters.0"/>
+                <parameterBindings id="_V-jIYlezEe68M9yXchFBKQ" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewElements.0/@viewComponentParts.2" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewElements.0/@viewComponentParts.2/@subViewComponentParts.0"/>
+                <parameterBindings id="_YVcHQlezEe68M9yXchFBKQ" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.5/@actions.0/@parameters.0"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
+          </viewElementEvents>
+        </viewElements>
+      </viewElements>
+      <viewElements xsi:type="core:ViewContainer" id="_Kx_wbFezEe68M9yXchFBKQ" name="Konfirmasi Virtual Account Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.5/@actions.0/@actionEvents.0/@outInteractionFlows.0">
+        <annotations text="/virtualaccount/confirmation"/>
+        <viewElements xsi:type="ext:Details" id="_1kbTkFe_Ee68M9yXchFBKQ" name="Konfirmasi Virtual Account">
+          <parameters id="_5ZeScle_Ee68M9yXchFBKQ" name="data" direction="out"/>
+          <viewComponentParts xsi:type="core:DataBinding" id="_4RnSjVe_Ee68M9yXchFBKQ" name="data">
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_9ZS-D1e_Ee68M9yXchFBKQ" name="Mohon selesaikan pembayaran dengan transfer ke rekening akun virtual berikut" featureConcept="//@domainModel/@domainElements.26"/>
+          </viewComponentParts>
+        </viewElements>
+      </viewElements>
+      <actions id="_gDWOVVezEe68M9yXchFBKQ" name="VirtualAccount" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST"/>
+        <parameters id="_scwa0lezEe68M9yXchFBKQ" name="bank"/>
+        <parameters id="_2EQgklezEe68M9yXchFBKQ" name="data"/>
+        <parameters id="_3zsd4lezEe68M9yXchFBKQ" name="amount"/>
+        <parameters id="_5CS_AlezEe68M9yXchFBKQ" name="product_name"/>
+        <actionEvents id="_7cYb2FezEe68M9yXchFBKQ" name="then">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_R3Qtd1e0Ee68M9yXchFBKQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.1">
+            <parameterBindingGroup id="_a-Knkle0Ee68M9yXchFBKQ">
+              <parameterBindings id="_b3pNQle0Ee68M9yXchFBKQ" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@parameters.5" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewElements.0/@parameters.0"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
+        </actionEvents>
+      </actions>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:ViewContainer" id="_WdpwrXIdEe6ZJrYp0Dvong" name="RetailOutlet">
+      <viewElements xsi:type="core:ViewContainer" id="_if5lDHIeEe6ZJrYp0Dvong" name="Retail Outlet Form" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.2/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="/retailoutlet"/>
+        <viewElements xsi:type="ext:Form" id="_nvxjP3IeEe6ZJrYp0Dvong" name="Retail Outlet Form">
+          <parameters xsi:type="ext:SimpleField" id="_6qh9BXIeEe6ZJrYp0Dvong" name="Jumlah">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_9tn6oHIeEe6ZJrYp0Dvong" name="amount"/>
+            <type xsi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </parameters>
+          <parameters xsi:type="ext:SimpleField" id="_CvXWIXIfEe6ZJrYp0Dvong" name="Nama Retail Outlet">
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_FHbZwHIfEe6ZJrYp0Dvong" name="retailOutlet"/>
+          </parameters>
+          <parameters xsi:type="ext:SelectionField" id="_Ic45pHIfEe6ZJrYp0Dvong" name="Payment Gateway">
+            <parameters xsi:type="ext:IFMLSlot" id="_Mf0jk3IfEe6ZJrYp0Dvong" name="Midtrans"/>
+            <parameters xsi:type="ext:IFMLSlot" id="_Nm8jxnIfEe6ZJrYp0Dvong" name="Oy"/>
+            <parameters xsi:type="ext:IFMLSlot" id="_PgQ1w3IfEe6ZJrYp0Dvong" name="product_name" direction="out"/>
+          </parameters>
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_lvQAeXIfEe6ZJrYp0Dvong" name="Kirim">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_pg8wd3IfEe6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.6/@actions.0">
+              <parameterBindingGroup id="_8m01InIfEe6ZJrYp0Dvong">
+                <parameterBindings id="_B8fSQnIgEe6ZJrYp0Dvong" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.0/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@actions.0/@parameters.0"/>
+                <parameterBindings id="_Dpb8RHIgEe6ZJrYp0Dvong" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.0/@viewElements.0/@parameters.2" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@actions.0/@parameters.1"/>
+                <parameterBindings id="_ICHzwnIgEe6ZJrYp0Dvong" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.0/@viewElements.0/@parameters.1" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@actions.0/@parameters.2"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
+          </viewElementEvents>
+        </viewElements>
+      </viewElements>
+      <viewElements xsi:type="core:ViewContainer" id="_P81AjHIgEe6ZJrYp0Dvong" name="Konfirmasi Retail Outlet Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.6/@actions.0/@actionEvents.0/@outInteractionFlows.0">
+        <annotations text="/retailoutlet/confirmation"/>
+        <viewElements xsi:type="ext:Details" id="_dkwO0HIgEe6ZJrYp0Dvong" name="Konfirmasi Retail Outlet">
+          <parameters id="_eODqcnIgEe6ZJrYp0Dvong" name="data"/>
+          <viewComponentParts xsi:type="core:DataBinding" id="_ftIQj3IgEe6ZJrYp0Dvong" name="data">
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_jeK5P3IgEe6ZJrYp0Dvong" name="Mohon selesaikan pembayaran di retail outlet dengan kode berikut"/>
+          </viewComponentParts>
+        </viewElements>
+      </viewElements>
+      <actions id="_VH2JY3IfEe6ZJrYp0Dvong" name="RetailOutlet" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST"/>
+        <parameters id="_t3QCUnIfEe6ZJrYp0Dvong" name="amount"/>
+        <parameters id="_vCEPpHIfEe6ZJrYp0Dvong" name="product_name"/>
+        <parameters id="_yPfN4nIfEe6ZJrYp0Dvong" name="retailOutlet"/>
+        <actionEvents id="_2pBZ-HIfEe6ZJrYp0Dvong" name="then">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_5UuyR3IfEe6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1">
+            <parameterBindingGroup id="_6RofYnIfEe6ZJrYp0Dvong">
+              <parameterBindings id="_6xVTInIfEe6ZJrYp0Dvong" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@parameters.5" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewElements.0/@parameters.0"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
+        </actionEvents>
+      </actions>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="core:ViewContainer" id="_h-jgzXJFEe6ZJrYp0Dvong" name="DebitCard">
+      <viewElements xsi:type="core:ViewContainer" id="_CT-v_HJGEe6ZJrYp0Dvong" name="Debit Card Form" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.3/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="/debitcard"/>
+        <viewElements xsi:type="ext:Form" id="_lGj-H3JGEe6ZJrYp0Dvong" name="Debit Card Form">
+          <parameters xsi:type="ext:SimpleField" id="_onqtinJGEe6ZJrYp0Dvong" name="Jumlah">
+            <parameters xsi:type="ext:IFMLSlot" id="_qE4SM3JGEe6ZJrYp0Dvong" name="amount"/>
+          </parameters>
+          <parameters xsi:type="ext:SimpleField" id="_rqm5-HJGEe6ZJrYp0Dvong" name="Nama Bank">
+            <parameters xsi:type="ext:IFMLSlot" id="_un0483JGEe6ZJrYp0Dvong" name="payment_type"/>
+          </parameters>
+          <parameters xsi:type="ext:SelectionField" id="_wNyKN3JGEe6ZJrYp0Dvong" name="Payment Gateway">
+            <parameters xsi:type="ext:IFMLSlot" id="_z9NCM3JGEe6ZJrYp0Dvong" name="Midtrans"/>
+            <parameters xsi:type="ext:IFMLSlot" id="_1thJfHJGEe6ZJrYp0Dvong" name="Oy"/>
+            <parameters xsi:type="ext:IFMLSlot" id="_2xoRtnJGEe6ZJrYp0Dvong" name="product_name" direction="out"/>
+          </parameters>
+          <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_5FvpWXJGEe6ZJrYp0Dvong" name="Kirim">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_6xlgF3JGEe6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0">
+              <parameterBindingGroup id="_9VQWsnJGEe6ZJrYp0Dvong">
+                <parameterBindings id="_-BWAonJGEe6ZJrYp0Dvong" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewElements.0/@viewComponentParts.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.7/@actions.0/@parameters.1"/>
+                <parameterBindings id="_AP471HJHEe6ZJrYp0Dvong" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.0/@viewElements.0/@parameters.1" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.7/@actions.0/@parameters.3"/>
+                <parameterBindings id="_DjokhHJHEe6ZJrYp0Dvong" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.0/@viewElements.0/@parameters.2" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.6/@actions.0/@parameters.1"/>
+              </parameterBindingGroup>
+            </outInteractionFlows>
+          </viewElementEvents>
+        </viewElements>
+      </viewElements>
+      <viewElements xsi:type="core:ViewContainer" id="_kI-KUHJFEe6ZJrYp0Dvong" name="Konfirmasi Debit Card Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@actions.0/@actionEvents.0/@outInteractionFlows.0">
+        <annotations text="/debitcard/confirmation"/>
+        <viewElements xsi:type="ext:Details" id="_vTwnYHJFEe6ZJrYp0Dvong" name="Konfirmasi Debit Card">
+          <parameters id="_yA4VF3JFEe6ZJrYp0Dvong" name="data"/>
+          <viewComponentParts xsi:type="core:DataBinding" id="_zyfclHJFEe6ZJrYp0Dvong" name="data">
+            <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_1TG6r3JFEe6ZJrYp0Dvong" name="Mohon selesaikan pembayaran dengan transfer ke rekening berikut"/>
+          </viewComponentParts>
+        </viewElements>
+      </viewElements>
+      <actions id="_MA9y1HJGEe6ZJrYp0Dvong" name="DebitCard">
+        <annotations text="POST"/>
+        <parameters id="_USDfEnJGEe6ZJrYp0Dvong" name="data"/>
+        <parameters id="_WNw91HJGEe6ZJrYp0Dvong" name="amount"/>
+        <parameters id="_XItjM3JGEe6ZJrYp0Dvong" name="product_name"/>
+        <parameters id="_YXJFJHJGEe6ZJrYp0Dvong" name="payment_type"/>
+        <actionEvents id="_bTrHuHJGEe6ZJrYp0Dvong" name="then">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_fD87Z3JGEe6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.1">
+            <parameterBindingGroup id="_hUSmUnJGEe6ZJrYp0Dvong">
+              <parameterBindings id="_h0izsnJGEe6ZJrYp0Dvong" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@parameters.5"/>
+            </parameterBindingGroup>
+          </outInteractionFlows>
+        </actionEvents>
+      </actions>
+    </interactionFlowModelElements>
+  </interactionFlowModel>
+  <domainModel id="_U7mqIVOAEe6RN_2PvgwO2w">
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9QP8FOAEe6RN_2PvgwO2w" name="PaymentInterfaceImpl">
+      <classifier xsi:type="uml:Class" href="../payment-gateway-uml-dop/paymentgateway.uml#_3j3cEEkKEe2ox7QLyh6hYQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aA8FOAEe6RN_2PvgwO2w" name="paymentinterfaceimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_99bmMEkKEe2ox7QLyh6hYQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aA8VOAEe6RN_2PvgwO2w" name="paymentLink">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_DmKJQEkLEe2ox7QLyh6hYQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_U9aA8lOAEe6RN_2PvgwO2w" name="createTransaction">
+      <behavioralFeature xsi:type="uml:Operation" href="../payment-gateway-uml-dop/paymentgateway.uml#_OeMCwEkLEe2ox7QLyh6hYQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aA81OAEe6RN_2PvgwO2w" name="PaymentInterfaceImpl">
+      <classifier xsi:type="uml:Class" href="../payment-gateway-uml-dop/paymentgateway.uml#_VMVVwEkLEe2ox7QLyh6hYQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aA9FOAEe6RN_2PvgwO2w" name="transactionToken">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_khKxwEkLEe2ox7QLyh6hYQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aA9VOAEe6RN_2PvgwO2w" name="paymentinterfaceimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_wocFkkkLEe2ox7QLyh6hYQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_U9aA9lOAEe6RN_2PvgwO2w" name="createTransaction">
+      <behavioralFeature xsi:type="uml:Operation" href="../payment-gateway-uml-dop/paymentgateway.uml#_tPRxYEkLEe2ox7QLyh6hYQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aA91OAEe6RN_2PvgwO2w" name="Midtrans">
+      <classifier xsi:type="uml:Component" href="../payment-gateway-uml-dop/paymentgateway.uml#_RdNGsEkNEe2ox7QLyh6hYQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aA-FOAEe6RN_2PvgwO2w" name="PaymentLink">
+      <classifier xsi:type="uml:Component" href="../payment-gateway-uml-dop/paymentgateway.uml#_XOwOkEkNEe2ox7QLyh6hYQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aA-VOAEe6RN_2PvgwO2w" name="Invoice">
+      <classifier xsi:type="uml:Component" href="../payment-gateway-uml-dop/paymentgateway.uml#_kZSWMEkNEe2ox7QLyh6hYQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aA-lOAEe6RN_2PvgwO2w" name="PaymentInterfaceImpl">
+      <classifier xsi:type="uml:Class" href="../payment-gateway-uml-dop/paymentgateway.uml#_oirIwFj4Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aA-1OAEe6RN_2PvgwO2w" name="paymentMethods">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_Bwn-8Fj5Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aA_FOAEe6RN_2PvgwO2w" name="sourceOfFunds">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_a2PYgFj5Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aA_VOAEe6RN_2PvgwO2w" name="paymentinterfaceimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_A7LIMFj6Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aA_lOAEe6RN_2PvgwO2w" name="paymentCheckoutUrl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_EcOQQFj-Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_U9aA_1OAEe6RN_2PvgwO2w" name="createTransaction">
+      <behavioralFeature xsi:type="uml:Operation" href="../payment-gateway-uml-dop/paymentgateway.uml#_4b7D8Fj5Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_U9aBAFOAEe6RN_2PvgwO2w" name="createChannel">
+      <behavioralFeature xsi:type="uml:Operation" href="../payment-gateway-uml-dop/paymentgateway.uml#_8FtYoFj6Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aBAVOAEe6RN_2PvgwO2w" name="PaymentChannelImpl">
+      <classifier xsi:type="uml:Class" href="../payment-gateway-uml-dop/paymentgateway.uml#_BXGZwFj7Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBAlOAEe6RN_2PvgwO2w" name="idTransaction">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_OmaTsFj7Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBA1OAEe6RN_2PvgwO2w" name="amount">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_CZqtAGAtEe29ebO2PveooQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_U9aBBFOAEe6RN_2PvgwO2w" name="createChannel">
+      <behavioralFeature xsi:type="uml:Operation" href="../payment-gateway-uml-dop/paymentgateway.uml#_Ru4ggFj7Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aBBVOAEe6RN_2PvgwO2w" name="PaymentChannelImpl">
+      <classifier xsi:type="uml:Class" href="../payment-gateway-uml-dop/paymentgateway.uml#_cFwNsFj7Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBBlOAEe6RN_2PvgwO2w" name="bankCode">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_CMIH0Fj8Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBB1OAEe6RN_2PvgwO2w" name="isOpenVA">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_IsoncFj8Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBCFOAEe6RN_2PvgwO2w" name="paymentchannelimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_aATuslj8Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBCVOAEe6RN_2PvgwO2w" name="vaAccountNumber">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_VhaPkFj-Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_U9aBClOAEe6RN_2PvgwO2w" name="createChannel">
+      <behavioralFeature xsi:type="uml:Operation" href="../payment-gateway-uml-dop/paymentgateway.uml#_0PweIFj8Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aBC1OAEe6RN_2PvgwO2w" name="PaymentChannelImpl">
+      <classifier xsi:type="uml:Class" href="../payment-gateway-uml-dop/paymentgateway.uml#_u0ZosFj8Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBDFOAEe6RN_2PvgwO2w" name="retailOutlet">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_YRu3kFj9Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBDVOAEe6RN_2PvgwO2w" name="paymentchannelimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_lwgw4lj9Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBDlOAEe6RN_2PvgwO2w" name="retailPaymentCode">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_hx04UFj-Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_U9aBD1OAEe6RN_2PvgwO2w" name="createChannel">
+      <behavioralFeature xsi:type="uml:Operation" href="../payment-gateway-uml-dop/paymentgateway.uml#_4C-4IFj8Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aBEFOAEe6RN_2PvgwO2w" name="PaymentChannelImpl">
+      <classifier xsi:type="uml:Class" href="../payment-gateway-uml-dop/paymentgateway.uml#_sstG8Fj9Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBEVOAEe6RN_2PvgwO2w" name="eWalletType">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_3qZjkFj9Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBElOAEe6RN_2PvgwO2w" name="eWalletUrl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_xXe-kFj-Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBE1OAEe6RN_2PvgwO2w" name="paymentchannelimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_4ihB4lj-Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_U9aBFFOAEe6RN_2PvgwO2w" name="createChannel">
+      <behavioralFeature xsi:type="uml:Operation" href="../payment-gateway-uml-dop/paymentgateway.uml#_254soFj9Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aBFVOAEe6RN_2PvgwO2w" name="PaymentChannelImpl">
+      <classifier xsi:type="uml:Class" href="../payment-gateway-uml-dop/paymentgateway.uml#_EnaBAFkIEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBFlOAEe6RN_2PvgwO2w" name="idToken">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_QK22EFkIEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBF1OAEe6RN_2PvgwO2w" name="paymentchannelimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#__DaXglkIEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBGFOAEe6RN_2PvgwO2w" name="creditCardUrl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_kJp0sGA4Ee29ebO2PveooQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_U9aBGVOAEe6RN_2PvgwO2w" name="createChannel">
+      <behavioralFeature xsi:type="uml:Operation" href="../payment-gateway-uml-dop/paymentgateway.uml#_PJ9H0FkKEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aBGlOAEe6RN_2PvgwO2w" name="PaymentChannelImpl">
+      <classifier xsi:type="uml:Class" href="../payment-gateway-uml-dop/paymentgateway.uml#_I2GZkFkJEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBG1OAEe6RN_2PvgwO2w" name="bankCode">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_RHg2IFkJEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBHFOAEe6RN_2PvgwO2w" name="paymentchannelimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_NTkN81kKEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBHVOAEe6RN_2PvgwO2w" name="directDebitUrl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_NB8d0GAuEe29ebO2PveooQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLBehavioralFeature" id="_U9aBHlOAEe6RN_2PvgwO2w" name="createChannel">
+      <behavioralFeature xsi:type="uml:Operation" href="../payment-gateway-uml-dop/paymentgateway.uml#_PTqdcFkKEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aBH1OAEe6RN_2PvgwO2w" name="PaymentRouting">
+      <classifier xsi:type="uml:Component" href="../payment-gateway-uml-dop/paymentgateway.uml#_Qxj2cFkYEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aBIFOAEe6RN_2PvgwO2w" name="VirtualAccount">
+      <classifier xsi:type="uml:Component" href="../payment-gateway-uml-dop/paymentgateway.uml#_bt0vsFkYEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aBIVOAEe6RN_2PvgwO2w" name="RetailOutlet">
+      <classifier xsi:type="uml:Component" href="../payment-gateway-uml-dop/paymentgateway.uml#_hrqnIFkYEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aBIlOAEe6RN_2PvgwO2w" name="Ewallet">
+      <classifier xsi:type="uml:Component" href="../payment-gateway-uml-dop/paymentgateway.uml#_s3e_UFkYEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aBI1OAEe6RN_2PvgwO2w" name="CreditCard">
+      <classifier xsi:type="uml:Component" href="../payment-gateway-uml-dop/paymentgateway.uml#_0CzWgFkYEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aBJFOAEe6RN_2PvgwO2w" name="DebitCard">
+      <classifier xsi:type="uml:Component" href="../payment-gateway-uml-dop/paymentgateway.uml#_5Ole4FkYEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLDomainConcept" id="_U9aBJVOAEe6RN_2PvgwO2w" name="Oy!">
+      <classifier xsi:type="uml:Component" href="../payment-gateway-uml-dop/paymentgateway.uml#_OyRCwFkZEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBJlOAEe6RN_2PvgwO2w" name="paymentinterfaceimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_99bmM0kKEe2ox7QLyh6hYQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBJ1OAEe6RN_2PvgwO2w" name="paymentinterfaceimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_wocsoEkLEe2ox7QLyh6hYQ"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBKFOAEe6RN_2PvgwO2w" name="paymentinterfaceimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_A7QAsFj6Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBKVOAEe6RN_2PvgwO2w" name="paymentchannelimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_aAUVwFj8Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBKlOAEe6RN_2PvgwO2w" name="paymentchannelimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_lwhX8Fj9Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBK1OAEe6RN_2PvgwO2w" name="paymentchannelimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_4ihB5Vj-Ee2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBLFOAEe6RN_2PvgwO2w" name="paymentchannelimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#__DaXhVkIEe2ZS9HzVidtAA"/>
+    </domainElements>
+    <domainElements xsi:type="core:UMLStructuralFeature" id="_U9aBLVOAEe6RN_2PvgwO2w" name="paymentchannelimpl">
+      <structuralFeature xsi:type="uml:Property" href="../payment-gateway-uml-dop/paymentgateway.uml#_NTnRQFkKEe2ZS9HzVidtAA"/>
+    </domainElements>
+  </domainModel>
+</core:IFMLModel>

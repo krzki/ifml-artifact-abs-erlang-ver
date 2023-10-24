@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ABSProfile="http:///schemas/ABSProfile/_fT1hQC4uEeuvR5MEkRqmYQ/13" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/ABSProfile/_fT1hQC4uEeuvR5MEkRqmYQ/13 model.profile.uml#_fT2vYC4uEeuvR5MEkRqmYQ">
+  <uml:Model xmi:id="_X3uhgEMXEe2sxM91UQDzyQ" name="paymentgateway">
+    <packageImport xmi:id="_X4nSUEMXEe2sxM91UQDzyQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_4FkVAEOmEe2IEs86mmiUIA" name="paymentgateway">
+      <ownedTemplateSignature xmi:id="_fRAnABbgEe6WQ7Uk8wBEPQ"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_vtTIcEkKEe2ox7QLyh6hYQ" name="DPaymentLink">
+        <packagedElement xmi:type="uml:Class" xmi:id="_3j3cEEkKEe2ox7QLyh6hYQ" name="PaymentInterfaceImpl">
+          <ownedAttribute xmi:id="_99bmMEkKEe2ox7QLyh6hYQ" name="paymentinterfaceimpl" type="_BXGZwFj7Ee2ZS9HzVidtAA" association="_99XUwEkKEe2ox7QLyh6hYQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_99bmMUkKEe2ox7QLyh6hYQ"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_99bmMkkKEe2ox7QLyh6hYQ" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_DmKJQEkLEe2ox7QLyh6hYQ" name="paymentLink" visibility="protected" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_OeMCwEkLEe2ox7QLyh6hYQ" name="createTransaction" visibility="protected"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_Sw51IEkLEe2ox7QLyh6hYQ" name="DInvoice">
+        <packagedElement xmi:type="uml:Class" xmi:id="_VMVVwEkLEe2ox7QLyh6hYQ" name="PaymentInterfaceImpl">
+          <ownedAttribute xmi:id="_khKxwEkLEe2ox7QLyh6hYQ" name="transactionToken" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_wocFkkkLEe2ox7QLyh6hYQ" name="paymentinterfaceimpl" type="_BXGZwFj7Ee2ZS9HzVidtAA" association="_wobegEkLEe2ox7QLyh6hYQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wocFk0kLEe2ox7QLyh6hYQ"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wocFlEkLEe2ox7QLyh6hYQ" value="1"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_tPRxYEkLEe2ox7QLyh6hYQ" name="createTransaction" visibility="protected"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_RdNGsEkNEe2ox7QLyh6hYQ" name="Midtrans">
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_uMLzoEkNEe2ox7QLyh6hYQ" client="_RdNGsEkNEe2ox7QLyh6hYQ" supplier="_kZSWMEkNEe2ox7QLyh6hYQ"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_uv0FIEkNEe2ox7QLyh6hYQ" client="_RdNGsEkNEe2ox7QLyh6hYQ" supplier="_XOwOkEkNEe2ox7QLyh6hYQ"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_CYXt4FkZEe2ZS9HzVidtAA" client="_RdNGsEkNEe2ox7QLyh6hYQ" supplier="_bt0vsFkYEe2ZS9HzVidtAA"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_FT8HIFkZEe2ZS9HzVidtAA" client="_RdNGsEkNEe2ox7QLyh6hYQ" supplier="_hrqnIFkYEe2ZS9HzVidtAA"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_GiryMFkZEe2ZS9HzVidtAA" client="_RdNGsEkNEe2ox7QLyh6hYQ" supplier="_s3e_UFkYEe2ZS9HzVidtAA"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_JUekYFkZEe2ZS9HzVidtAA" client="_RdNGsEkNEe2ox7QLyh6hYQ" supplier="_0CzWgFkYEe2ZS9HzVidtAA"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_KXXkwFkZEe2ZS9HzVidtAA" client="_RdNGsEkNEe2ox7QLyh6hYQ" supplier="_5Ole4FkYEe2ZS9HzVidtAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_XOwOkEkNEe2ox7QLyh6hYQ" name="PaymentLink">
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_pB6HIEkNEe2ox7QLyh6hYQ" client="_XOwOkEkNEe2ox7QLyh6hYQ" supplier="_vtTIcEkKEe2ox7QLyh6hYQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_kZSWMEkNEe2ox7QLyh6hYQ" name="Invoice">
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_sslpIEkNEe2ox7QLyh6hYQ" client="_kZSWMEkNEe2ox7QLyh6hYQ" supplier="_Sw51IEkLEe2ox7QLyh6hYQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_bzHF4Fj4Ee2ZS9HzVidtAA" name="DPaymentRouting">
+        <packagedElement xmi:type="uml:Class" xmi:id="_oirIwFj4Ee2ZS9HzVidtAA" name="PaymentInterfaceImpl">
+          <ownedAttribute xmi:id="_Bwn-8Fj5Ee2ZS9HzVidtAA" name="paymentMethods" visibility="protected" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_a2PYgFj5Ee2ZS9HzVidtAA" name="sourceOfFunds" visibility="protected" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_A7LIMFj6Ee2ZS9HzVidtAA" name="paymentinterfaceimpl" type="_BXGZwFj7Ee2ZS9HzVidtAA" association="_A7G2wFj6Ee2ZS9HzVidtAA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_A7M9YFj6Ee2ZS9HzVidtAA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_A7OykFj6Ee2ZS9HzVidtAA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_EcOQQFj-Ee2ZS9HzVidtAA" name="paymentCheckoutUrl" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_4b7D8Fj5Ee2ZS9HzVidtAA" name="createTransaction" visibility="protected"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_xcnTAFj6Ee2ZS9HzVidtAA" name="MPayment">
+        <packagedElement xmi:type="uml:Interface" xmi:id="_6LIiUFj6Ee2ZS9HzVidtAA" name="PaymentChannel">
+          <ownedOperation xmi:id="_8FtYoFj6Ee2ZS9HzVidtAA" name="createChannel" visibility="protected"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_BXGZwFj7Ee2ZS9HzVidtAA" name="PaymentChannelImpl">
+          <ownedAttribute xmi:id="_OmaTsFj7Ee2ZS9HzVidtAA" name="idTransaction" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_CZqtAGAtEe29ebO2PveooQ" name="amount" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <interfaceRealization xmi:id="_sWbCAFkKEe2ZS9HzVidtAA" client="_BXGZwFj7Ee2ZS9HzVidtAA" supplier="_6LIiUFj6Ee2ZS9HzVidtAA" contract="_6LIiUFj6Ee2ZS9HzVidtAA"/>
+          <ownedOperation xmi:id="_Ru4ggFj7Ee2ZS9HzVidtAA" name="createChannel" visibility="protected"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_W6qB0Fj7Ee2ZS9HzVidtAA" name="DVirtualAccount">
+        <packagedElement xmi:type="uml:Class" xmi:id="_cFwNsFj7Ee2ZS9HzVidtAA" name="PaymentChannelImpl">
+          <ownedAttribute xmi:id="_CMIH0Fj8Ee2ZS9HzVidtAA" name="bankCode" visibility="protected" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_IsoncFj8Ee2ZS9HzVidtAA" name="isOpenVA" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_aATuslj8Ee2ZS9HzVidtAA" name="paymentchannelimpl" type="_BXGZwFj7Ee2ZS9HzVidtAA" association="_aATHoFj8Ee2ZS9HzVidtAA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aATus1j8Ee2ZS9HzVidtAA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aATutFj8Ee2ZS9HzVidtAA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_VhaPkFj-Ee2ZS9HzVidtAA" name="vaAccountNumber" visibility="protected" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_0PweIFj8Ee2ZS9HzVidtAA" name="createChannel" visibility="protected"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_lpIL8Fj8Ee2ZS9HzVidtAA" name="DRetailOutlet">
+        <packagedElement xmi:type="uml:Class" xmi:id="_u0ZosFj8Ee2ZS9HzVidtAA" name="PaymentChannelImpl">
+          <ownedAttribute xmi:id="_YRu3kFj9Ee2ZS9HzVidtAA" name="retailOutlet" visibility="protected" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_lwgw4lj9Ee2ZS9HzVidtAA" name="paymentchannelimpl" type="_BXGZwFj7Ee2ZS9HzVidtAA" association="_lwgJ0Fj9Ee2ZS9HzVidtAA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lwgw41j9Ee2ZS9HzVidtAA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lwgw5Fj9Ee2ZS9HzVidtAA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_hx04UFj-Ee2ZS9HzVidtAA" name="retailPaymentCode" visibility="protected" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_4C-4IFj8Ee2ZS9HzVidtAA" name="createChannel" visibility="protected"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_mv-CwFj9Ee2ZS9HzVidtAA" name="DEwallet">
+        <packagedElement xmi:type="uml:Class" xmi:id="_sstG8Fj9Ee2ZS9HzVidtAA" name="PaymentChannelImpl">
+          <ownedAttribute xmi:id="_3qZjkFj9Ee2ZS9HzVidtAA" name="eWalletType" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_xXe-kFj-Ee2ZS9HzVidtAA" name="eWalletUrl" visibility="protected" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_4ihB4lj-Ee2ZS9HzVidtAA" name="paymentchannelimpl" type="_BXGZwFj7Ee2ZS9HzVidtAA" association="_4iga0Fj-Ee2ZS9HzVidtAA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4ihB41j-Ee2ZS9HzVidtAA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4ihB5Fj-Ee2ZS9HzVidtAA" value="1"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_254soFj9Ee2ZS9HzVidtAA" name="createChannel" visibility="protected"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_-QFBoFj-Ee2ZS9HzVidtAA" name="DCreditCard">
+        <packagedElement xmi:type="uml:Class" xmi:id="_EnaBAFkIEe2ZS9HzVidtAA" name="PaymentChannelImpl">
+          <ownedAttribute xmi:id="_QK22EFkIEe2ZS9HzVidtAA" name="idToken" visibility="protected" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="__DaXglkIEe2ZS9HzVidtAA" name="paymentchannelimpl" type="_BXGZwFj7Ee2ZS9HzVidtAA" association="__DZwcFkIEe2ZS9HzVidtAA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__DaXg1kIEe2ZS9HzVidtAA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__DaXhFkIEe2ZS9HzVidtAA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_kJp0sGA4Ee29ebO2PveooQ" name="creditCardUrl" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_PJ9H0FkKEe2ZS9HzVidtAA" name="createChannel" visibility="protected"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_8ZK-0FkIEe2ZS9HzVidtAA" name="DDebitCard">
+        <packagedElement xmi:type="uml:Class" xmi:id="_I2GZkFkJEe2ZS9HzVidtAA" name="PaymentChannelImpl">
+          <ownedAttribute xmi:id="_RHg2IFkJEe2ZS9HzVidtAA" name="bankCode" visibility="protected" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_NTkN81kKEe2ZS9HzVidtAA" name="paymentchannelimpl" type="_BXGZwFj7Ee2ZS9HzVidtAA" association="_NTkN8FkKEe2ZS9HzVidtAA">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NTlcEFkKEe2ZS9HzVidtAA"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NTmqMFkKEe2ZS9HzVidtAA" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_NB8d0GAuEe29ebO2PveooQ" name="directDebitUrl" visibility="protected">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_PTqdcFkKEe2ZS9HzVidtAA" name="createChannel" visibility="protected"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_Qxj2cFkYEe2ZS9HzVidtAA" name="PaymentRouting">
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_ZZhx0FkYEe2ZS9HzVidtAA" client="_Qxj2cFkYEe2ZS9HzVidtAA" supplier="_bzHF4Fj4Ee2ZS9HzVidtAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_bt0vsFkYEe2ZS9HzVidtAA" name="VirtualAccount">
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_mtVxQFkYEe2ZS9HzVidtAA" client="_bt0vsFkYEe2ZS9HzVidtAA" supplier="_W6qB0Fj7Ee2ZS9HzVidtAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_hrqnIFkYEe2ZS9HzVidtAA" name="RetailOutlet">
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_kteyUFkYEe2ZS9HzVidtAA" client="_hrqnIFkYEe2ZS9HzVidtAA" supplier="_lpIL8Fj8Ee2ZS9HzVidtAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_s3e_UFkYEe2ZS9HzVidtAA" name="Ewallet">
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_wf2NIFkYEe2ZS9HzVidtAA" client="_s3e_UFkYEe2ZS9HzVidtAA" supplier="_mv-CwFj9Ee2ZS9HzVidtAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_0CzWgFkYEe2ZS9HzVidtAA" name="CreditCard">
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_3NBPwFkYEe2ZS9HzVidtAA" client="_0CzWgFkYEe2ZS9HzVidtAA" supplier="_-QFBoFj-Ee2ZS9HzVidtAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_5Ole4FkYEe2ZS9HzVidtAA" name="DebitCard">
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_7T6MoFkYEe2ZS9HzVidtAA" client="_5Ole4FkYEe2ZS9HzVidtAA" supplier="_8ZK-0FkIEe2ZS9HzVidtAA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Component" xmi:id="_OyRCwFkZEe2ZS9HzVidtAA" name="Oy!">
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_VbDUoFkZEe2ZS9HzVidtAA" client="_OyRCwFkZEe2ZS9HzVidtAA" supplier="_XOwOkEkNEe2ox7QLyh6hYQ"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_W9vPYFkZEe2ZS9HzVidtAA" client="_OyRCwFkZEe2ZS9HzVidtAA" supplier="_kZSWMEkNEe2ox7QLyh6hYQ"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_igbPcFkZEe2ZS9HzVidtAA" client="_OyRCwFkZEe2ZS9HzVidtAA" supplier="_Qxj2cFkYEe2ZS9HzVidtAA"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_lF9HQFkZEe2ZS9HzVidtAA" client="_OyRCwFkZEe2ZS9HzVidtAA" supplier="_bt0vsFkYEe2ZS9HzVidtAA"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_l-DM4FkZEe2ZS9HzVidtAA" client="_OyRCwFkZEe2ZS9HzVidtAA" supplier="_hrqnIFkYEe2ZS9HzVidtAA"/>
+        <packagedElement xmi:type="uml:Dependency" xmi:id="_nbZ7sFkZEe2ZS9HzVidtAA" client="_OyRCwFkZEe2ZS9HzVidtAA" supplier="_s3e_UFkYEe2ZS9HzVidtAA"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_99XUwEkKEe2ox7QLyh6hYQ" memberEnd="_99bmMEkKEe2ox7QLyh6hYQ _99bmM0kKEe2ox7QLyh6hYQ">
+      <eAnnotations xmi:id="_99aYEEkKEe2ox7QLyh6hYQ" source="org.eclipse.papyrus">
+        <details xmi:id="_99a_IEkKEe2ox7QLyh6hYQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_99bmM0kKEe2ox7QLyh6hYQ" name="paymentinterfaceimpl" type="_3j3cEEkKEe2ox7QLyh6hYQ" association="_99XUwEkKEe2ox7QLyh6hYQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_wobegEkLEe2ox7QLyh6hYQ" memberEnd="_wocFkkkLEe2ox7QLyh6hYQ _wocsoEkLEe2ox7QLyh6hYQ">
+      <eAnnotations xmi:id="_wocFkEkLEe2ox7QLyh6hYQ" source="org.eclipse.papyrus">
+        <details xmi:id="_wocFkUkLEe2ox7QLyh6hYQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_wocsoEkLEe2ox7QLyh6hYQ" name="paymentinterfaceimpl" type="_VMVVwEkLEe2ox7QLyh6hYQ" association="_wobegEkLEe2ox7QLyh6hYQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_A7G2wFj6Ee2ZS9HzVidtAA" memberEnd="_A7LIMFj6Ee2ZS9HzVidtAA _A7QAsFj6Ee2ZS9HzVidtAA">
+      <eAnnotations xmi:id="_A7JTAFj6Ee2ZS9HzVidtAA" source="org.eclipse.papyrus">
+        <details xmi:id="_A7JTAVj6Ee2ZS9HzVidtAA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_A7QAsFj6Ee2ZS9HzVidtAA" name="paymentinterfaceimpl" type="_oirIwFj4Ee2ZS9HzVidtAA" association="_A7G2wFj6Ee2ZS9HzVidtAA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_aATHoFj8Ee2ZS9HzVidtAA" memberEnd="_aATuslj8Ee2ZS9HzVidtAA _aAUVwFj8Ee2ZS9HzVidtAA">
+      <eAnnotations xmi:id="_aATusFj8Ee2ZS9HzVidtAA" source="org.eclipse.papyrus">
+        <details xmi:id="_aATusVj8Ee2ZS9HzVidtAA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_aAUVwFj8Ee2ZS9HzVidtAA" name="paymentchannelimpl" type="_cFwNsFj7Ee2ZS9HzVidtAA" association="_aATHoFj8Ee2ZS9HzVidtAA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_lwgJ0Fj9Ee2ZS9HzVidtAA" memberEnd="_lwgw4lj9Ee2ZS9HzVidtAA _lwhX8Fj9Ee2ZS9HzVidtAA">
+      <eAnnotations xmi:id="_lwgw4Fj9Ee2ZS9HzVidtAA" source="org.eclipse.papyrus">
+        <details xmi:id="_lwgw4Vj9Ee2ZS9HzVidtAA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_lwhX8Fj9Ee2ZS9HzVidtAA" name="paymentchannelimpl" type="_u0ZosFj8Ee2ZS9HzVidtAA" association="_lwgJ0Fj9Ee2ZS9HzVidtAA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_4iga0Fj-Ee2ZS9HzVidtAA" memberEnd="_4ihB4lj-Ee2ZS9HzVidtAA _4ihB5Vj-Ee2ZS9HzVidtAA">
+      <eAnnotations xmi:id="_4ihB4Fj-Ee2ZS9HzVidtAA" source="org.eclipse.papyrus">
+        <details xmi:id="_4ihB4Vj-Ee2ZS9HzVidtAA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_4ihB5Vj-Ee2ZS9HzVidtAA" name="paymentchannelimpl" type="_sstG8Fj9Ee2ZS9HzVidtAA" association="_4iga0Fj-Ee2ZS9HzVidtAA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="__DZwcFkIEe2ZS9HzVidtAA" memberEnd="__DaXglkIEe2ZS9HzVidtAA __DaXhVkIEe2ZS9HzVidtAA">
+      <eAnnotations xmi:id="__DaXgFkIEe2ZS9HzVidtAA" source="org.eclipse.papyrus">
+        <details xmi:id="__DaXgVkIEe2ZS9HzVidtAA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="__DaXhVkIEe2ZS9HzVidtAA" name="paymentchannelimpl" type="_EnaBAFkIEe2ZS9HzVidtAA" association="__DZwcFkIEe2ZS9HzVidtAA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_NTkN8FkKEe2ZS9HzVidtAA" memberEnd="_NTkN81kKEe2ZS9HzVidtAA _NTnRQFkKEe2ZS9HzVidtAA">
+      <eAnnotations xmi:id="_NTkN8VkKEe2ZS9HzVidtAA" source="org.eclipse.papyrus">
+        <details xmi:id="_NTkN8lkKEe2ZS9HzVidtAA" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:id="_NTnRQFkKEe2ZS9HzVidtAA" name="paymentchannelimpl" type="_I2GZkFkJEe2ZS9HzVidtAA" association="_NTkN8FkKEe2ZS9HzVidtAA"/>
+    </packagedElement>
+    <profileApplication xmi:id="_v7VegEOmEe2IEs86mmiUIA">
+      <eAnnotations xmi:id="_v7Yh0EOmEe2IEs86mmiUIA" source="PapyrusVersion">
+        <details xmi:id="_v7Yh0UOmEe2IEs86mmiUIA" key="Version" value="0.3.6"/>
+        <details xmi:id="_v7Yh0kOmEe2IEs86mmiUIA" key="Comment" value="vmj"/>
+        <details xmi:id="_v7Yh00OmEe2IEs86mmiUIA" key="Copyright" value=""/>
+        <details xmi:id="_v7Yh1EOmEe2IEs86mmiUIA" key="Date" value="2020-11-24"/>
+        <details xmi:id="_v7Yh1UOmEe2IEs86mmiUIA" key="Author" value="MRA"/>
+      </eAnnotations>
+      <eAnnotations xmi:id="_v7WsoEOmEe2IEs86mmiUIA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="model.profile.uml#_fT2vYC4uEeuvR5MEkRqmYQ"/>
+      </eAnnotations>
+      <appliedProfile href="model.profile.uml#_FOruEHN3EeOO7bDXndKQpA"/>
+    </profileApplication>
+  </uml:Model>
+  <ABSProfile:vm xmi:id="_6y6FAEOmEe2IEs86mmiUIA" base_Package="_4FkVAEOmEe2IEs86mmiUIA"/>
+  <ABSProfile:delta xmi:id="_yHyN4EkKEe2ox7QLyh6hYQ" base_Package="_vtTIcEkKEe2ox7QLyh6hYQ"/>
+  <ABSProfile:modifiedClass xmi:id="_8KPKQEkKEe2ox7QLyh6hYQ" base_Class="_3j3cEEkKEe2ox7QLyh6hYQ"/>
+  <ABSProfile:modifies xmi:id="__DLGQEkKEe2ox7QLyh6hYQ" base_Association="_99XUwEkKEe2ox7QLyh6hYQ"/>
+  <ABSProfile:adds xmi:id="_Erh14EkLEe2ox7QLyh6hYQ" base_Property="_DmKJQEkLEe2ox7QLyh6hYQ"/>
+  <ABSProfile:modifies xmi:id="_Ps4DcEkLEe2ox7QLyh6hYQ" base_Operation="_OeMCwEkLEe2ox7QLyh6hYQ"/>
+  <ABSProfile:modifiedClass xmi:id="_XXrzAEkLEe2ox7QLyh6hYQ" base_Class="_VMVVwEkLEe2ox7QLyh6hYQ"/>
+  <ABSProfile:delta xmi:id="_YGZ6MEkLEe2ox7QLyh6hYQ" base_Package="_Sw51IEkLEe2ox7QLyh6hYQ"/>
+  <ABSProfile:adds xmi:id="_piCDkEkLEe2ox7QLyh6hYQ" base_Property="_khKxwEkLEe2ox7QLyh6hYQ"/>
+  <ABSProfile:modifies xmi:id="_uDsQ4EkLEe2ox7QLyh6hYQ" base_Operation="_tPRxYEkLEe2ox7QLyh6hYQ"/>
+  <ABSProfile:modifies xmi:id="_x2udoEkLEe2ox7QLyh6hYQ" base_Association="_wobegEkLEe2ox7QLyh6hYQ"/>
+  <ABSProfile:product xmi:id="_St55kEkNEe2ox7QLyh6hYQ" base_Component="_RdNGsEkNEe2ox7QLyh6hYQ"/>
+  <ABSProfile:feature xmi:id="_ZuFXwEkNEe2ox7QLyh6hYQ" base_Component="_XOwOkEkNEe2ox7QLyh6hYQ"/>
+  <ABSProfile:when xmi:id="_p0k6MEkNEe2ox7QLyh6hYQ" base_Dependency="_pB6HIEkNEe2ox7QLyh6hYQ"/>
+  <ABSProfile:feature xmi:id="_sADTQEkNEe2ox7QLyh6hYQ" base_Component="_kZSWMEkNEe2ox7QLyh6hYQ"/>
+  <ABSProfile:when xmi:id="_tVifgEkNEe2ox7QLyh6hYQ" base_Dependency="_sslpIEkNEe2ox7QLyh6hYQ"/>
+  <ABSProfile:delta xmi:id="_mx680Fj4Ee2ZS9HzVidtAA" base_Package="_bzHF4Fj4Ee2ZS9HzVidtAA"/>
+  <ABSProfile:modifiedClass xmi:id="_2egKcFj4Ee2ZS9HzVidtAA" base_Class="_oirIwFj4Ee2ZS9HzVidtAA"/>
+  <ABSProfile:adds xmi:id="_WhDg8Fj5Ee2ZS9HzVidtAA" base_Property="_Bwn-8Fj5Ee2ZS9HzVidtAA"/>
+  <ABSProfile:adds xmi:id="_yjkJcFj5Ee2ZS9HzVidtAA" base_Property="_a2PYgFj5Ee2ZS9HzVidtAA"/>
+  <ABSProfile:modifies xmi:id="_5QVjcFj5Ee2ZS9HzVidtAA" base_Operation="_4b7D8Fj5Ee2ZS9HzVidtAA"/>
+  <ABSProfile:modifies xmi:id="_CN4GMFj6Ee2ZS9HzVidtAA" base_Association="_A7G2wFj6Ee2ZS9HzVidtAA"/>
+  <ABSProfile:module xmi:id="_4PNoMFj6Ee2ZS9HzVidtAA" base_Package="_xcnTAFj6Ee2ZS9HzVidtAA"/>
+  <ABSProfile:delta xmi:id="_aXnQ4Fj7Ee2ZS9HzVidtAA" base_Package="_W6qB0Fj7Ee2ZS9HzVidtAA"/>
+  <ABSProfile:modifiedClass xmi:id="_hgQukFj7Ee2ZS9HzVidtAA" base_Class="_cFwNsFj7Ee2ZS9HzVidtAA"/>
+  <ABSProfile:adds xmi:id="_EHzxYFj8Ee2ZS9HzVidtAA" base_Property="_CMIH0Fj8Ee2ZS9HzVidtAA"/>
+  <ABSProfile:adds xmi:id="_NuxroFj8Ee2ZS9HzVidtAA" base_Property="_IsoncFj8Ee2ZS9HzVidtAA"/>
+  <ABSProfile:modifies xmi:id="_bi3GkFj8Ee2ZS9HzVidtAA" base_Association="_aATHoFj8Ee2ZS9HzVidtAA"/>
+  <ABSProfile:delta xmi:id="_o4HQcFj8Ee2ZS9HzVidtAA" base_Package="_lpIL8Fj8Ee2ZS9HzVidtAA"/>
+  <ABSProfile:modifies xmi:id="_2mxY0Fj8Ee2ZS9HzVidtAA" base_Operation="_0PweIFj8Ee2ZS9HzVidtAA"/>
+  <ABSProfile:modifies xmi:id="_4DAtUFj8Ee2ZS9HzVidtAA" base_Operation="_4C-4IFj8Ee2ZS9HzVidtAA"/>
+  <ABSProfile:modifiedClass xmi:id="_82wJIFj8Ee2ZS9HzVidtAA" base_Class="_u0ZosFj8Ee2ZS9HzVidtAA"/>
+  <ABSProfile:adds xmi:id="_ZY_akFj9Ee2ZS9HzVidtAA" base_Property="_YRu3kFj9Ee2ZS9HzVidtAA"/>
+  <ABSProfile:delta xmi:id="_qzMAkFj9Ee2ZS9HzVidtAA" base_Package="_mv-CwFj9Ee2ZS9HzVidtAA"/>
+  <ABSProfile:modifiedClass xmi:id="_u-m4IFj9Ee2ZS9HzVidtAA" base_Class="_sstG8Fj9Ee2ZS9HzVidtAA"/>
+  <ABSProfile:modifies xmi:id="_2556wlj9Ee2ZS9HzVidtAA" base_Operation="_254soFj9Ee2ZS9HzVidtAA"/>
+  <ABSProfile:adds xmi:id="_-5NToFj9Ee2ZS9HzVidtAA" base_Property="_3qZjkFj9Ee2ZS9HzVidtAA"/>
+  <ABSProfile:adds xmi:id="_EcPeYFj-Ee2ZS9HzVidtAA" base_Property="_EcOQQFj-Ee2ZS9HzVidtAA"/>
+  <ABSProfile:adds xmi:id="_bRtaQFj-Ee2ZS9HzVidtAA" base_Property="_VhaPkFj-Ee2ZS9HzVidtAA"/>
+  <ABSProfile:adds xmi:id="_mO3EUFj-Ee2ZS9HzVidtAA" base_Property="_hx04UFj-Ee2ZS9HzVidtAA"/>
+  <ABSProfile:adds xmi:id="_yGYr8Fj-Ee2ZS9HzVidtAA" base_Property="_xXe-kFj-Ee2ZS9HzVidtAA"/>
+  <ABSProfile:delta xmi:id="_A1HbIFkIEe2ZS9HzVidtAA" base_Package="_-QFBoFj-Ee2ZS9HzVidtAA"/>
+  <ABSProfile:modifiedClass xmi:id="_HhhowFkIEe2ZS9HzVidtAA" base_Class="_EnaBAFkIEe2ZS9HzVidtAA"/>
+  <ABSProfile:adds xmi:id="_QK4EMlkIEe2ZS9HzVidtAA" base_Property="_QK22EFkIEe2ZS9HzVidtAA"/>
+  <ABSProfile:modifies xmi:id="_BacgUFkJEe2ZS9HzVidtAA" base_Association="_4iga0Fj-Ee2ZS9HzVidtAA"/>
+  <ABSProfile:modifies xmi:id="_CKXhYFkJEe2ZS9HzVidtAA" base_Association="__DZwcFkIEe2ZS9HzVidtAA"/>
+  <ABSProfile:modifies xmi:id="_C6KmoFkJEe2ZS9HzVidtAA" base_Association="_lwgJ0Fj9Ee2ZS9HzVidtAA"/>
+  <ABSProfile:delta xmi:id="_FDpboFkJEe2ZS9HzVidtAA" base_Package="_8ZK-0FkIEe2ZS9HzVidtAA"/>
+  <ABSProfile:modifiedClass xmi:id="_LSEFsFkJEe2ZS9HzVidtAA" base_Class="_I2GZkFkJEe2ZS9HzVidtAA"/>
+  <ABSProfile:adds xmi:id="_RHiEQFkJEe2ZS9HzVidtAA" base_Property="_RHg2IFkJEe2ZS9HzVidtAA"/>
+  <ABSProfile:modifies xmi:id="_OKsDMFkKEe2ZS9HzVidtAA" base_Association="_NTkN8FkKEe2ZS9HzVidtAA"/>
+  <ABSProfile:modifies xmi:id="_PJ-9AFkKEe2ZS9HzVidtAA" base_Operation="_PJ9H0FkKEe2ZS9HzVidtAA"/>
+  <ABSProfile:modifies xmi:id="_PTrrklkKEe2ZS9HzVidtAA" base_Operation="_PTqdcFkKEe2ZS9HzVidtAA"/>
+  <ABSProfile:feature xmi:id="_UeMgQFkYEe2ZS9HzVidtAA" base_Component="_Qxj2cFkYEe2ZS9HzVidtAA"/>
+  <ABSProfile:when xmi:id="_aNZewFkYEe2ZS9HzVidtAA" base_Dependency="_ZZhx0FkYEe2ZS9HzVidtAA"/>
+  <ABSProfile:feature xmi:id="_cgrwAFkYEe2ZS9HzVidtAA" base_Component="_bt0vsFkYEe2ZS9HzVidtAA"/>
+  <ABSProfile:feature xmi:id="_jtSgoFkYEe2ZS9HzVidtAA" base_Component="_hrqnIFkYEe2ZS9HzVidtAA"/>
+  <ABSProfile:when xmi:id="_l_SYcFkYEe2ZS9HzVidtAA" base_Dependency="_kteyUFkYEe2ZS9HzVidtAA"/>
+  <ABSProfile:when xmi:id="_odwmAFkYEe2ZS9HzVidtAA" base_Dependency="_mtVxQFkYEe2ZS9HzVidtAA"/>
+  <ABSProfile:when xmi:id="_xgBQsFkYEe2ZS9HzVidtAA" base_Dependency="_wf2NIFkYEe2ZS9HzVidtAA"/>
+  <ABSProfile:feature xmi:id="_yoTHYFkYEe2ZS9HzVidtAA" base_Component="_s3e_UFkYEe2ZS9HzVidtAA"/>
+  <ABSProfile:feature xmi:id="_2cRIQFkYEe2ZS9HzVidtAA" base_Component="_0CzWgFkYEe2ZS9HzVidtAA"/>
+  <ABSProfile:when xmi:id="_4M9p0FkYEe2ZS9HzVidtAA" base_Dependency="_3NBPwFkYEe2ZS9HzVidtAA"/>
+  <ABSProfile:feature xmi:id="_6unuQFkYEe2ZS9HzVidtAA" base_Component="_5Ole4FkYEe2ZS9HzVidtAA"/>
+  <ABSProfile:when xmi:id="_8mvtgFkYEe2ZS9HzVidtAA" base_Dependency="_7T6MoFkYEe2ZS9HzVidtAA"/>
+  <ABSProfile:product xmi:id="_PXLtsFkZEe2ZS9HzVidtAA" base_Component="_OyRCwFkZEe2ZS9HzVidtAA"/>
+  <ABSProfile:adds xmi:id="_XwAjAGAuEe29ebO2PveooQ" base_Property="_NB8d0GAuEe29ebO2PveooQ"/>
+  <ABSProfile:adds xmi:id="_zqCZYGA4Ee29ebO2PveooQ" base_Property="_kJp0sGA4Ee29ebO2PveooQ"/>
+</xmi:XMI>
