@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_BbXAsKFvEemJ5bcPtTP5Ug" name="Model" visibility="public">
+  <packageImport xmi:id="_BbXAsaFvEemJ5bcPtTP5Ug">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_xZ3dkKFvEemJ5bcPtTP5Ug" name="Expense">
+    <ownedAttribute xmi:id="_-E4-sKFvEemJ5bcPtTP5Ug" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ZMZ-kKFwEemJ5bcPtTP5Ug" name="datestamp" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ieAFwKFwEemJ5bcPtTP5Ug" name="description" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_obL14KFwEemJ5bcPtTP5Ug" name="amount" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_v2iNIKFwEemJ5bcPtTP5Ug" name="idCoa" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_1-TmAMrYEem655lVEKjZqQ" name="programName" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_rML94KFwEemJ5bcPtTP5Ug" name="idProgram" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_7bC9wElwEeuShNEGdI6A-Q" name="coaName">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_aNkt8KHvEemWDPX4S_HyeA" name="Income">
+    <ownedAttribute xmi:id="_eDG1EKHvEemWDPX4S_HyeA" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_iK37sKHvEemWDPX4S_HyeA" name="datestamp" type="_pl8cAMiEEemxKOgT6hR6IA" isUnique="false"/>
+    <ownedAttribute xmi:id="_mn3EYKHvEemWDPX4S_HyeA" name="description">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sUbloKHvEemWDPX4S_HyeA" name="amount" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_1H8psKHvEemWDPX4S_HyeA" name="idCoa" type="_bvcB8KHyEemWDPX4S_HyeA" isUnique="false"/>
+    <ownedAttribute xmi:id="_TO-_4MrbEem655lVEKjZqQ" name="programName" type="_QskcUKHwEemWDPX4S_HyeA" isUnique="false"/>
+    <ownedAttribute xmi:id="_vPUCYKHvEemWDPX4S_HyeA" name="idProgram" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_9bpS4OwCEeqvHKFDrPwrRw" name="paymentMethod">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_VSRh0EluEeuShNEGdI6A-Q" name="coaName">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_QskcUKHwEemWDPX4S_HyeA" name="Program">
+    <ownedAttribute xmi:id="_StsmkKHwEemWDPX4S_HyeA" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_XFEPcKHwEemWDPX4S_HyeA" name="name" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ak3XIKHwEemWDPX4S_HyeA" name="description" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ghZnAKHwEemWDPX4S_HyeA" name="target" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_s2mCEKHwEemWDPX4S_HyeA" name="partner" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_u2wjAKHwEemWDPX4S_HyeA" name="logoUrl" type="_tyBm0K3pEem3S5Q3cCWwGw" isUnique="false"/>
+    <ownedAttribute xmi:id="_0iX_gBZcEeu4eYYSDxeSYw" name="totalIncome">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_5uBukIAVEe2vod1L-cUt-w" name="executionDate" type="_pl8cAMiEEemxKOgT6hR6IA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_iiFP4KHxEemWDPX4S_HyeA" name="Summary">
+    <ownedAttribute xmi:id="_pqA74KHxEemWDPX4S_HyeA" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ueEgwKHxEemWDPX4S_HyeA" name="datestamp" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_wt-G0KHxEemWDPX4S_HyeA" name="description" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_3gBCYKHxEemWDPX4S_HyeA" name="income" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_5gIgAKHxEemWDPX4S_HyeA" name="expense" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_XAWYsMrbEem655lVEKjZqQ" name="programName" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Ntp7QN-VEemcBpehmPZd5Q" name="saldo" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_B3cwQKHyEemWDPX4S_HyeA" name="Donor">
+    <ownedAttribute xmi:id="_Ehrh4KHyEemWDPX4S_HyeA" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_NONNIKHyEemWDPX4S_HyeA" name="name" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Qp-wcKHyEemWDPX4S_HyeA" name="email" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_S-hl8KHyEemWDPX4S_HyeA" name="phone" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_UsSvUKHyEemWDPX4S_HyeA" name="address" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bvcB8KHyEemWDPX4S_HyeA" name="Chart Of Account" visibility="public">
+    <ownedAttribute xmi:id="_g38M0KHyEemWDPX4S_HyeA" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_mvf2EKHyEemWDPX4S_HyeA" name="name" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ovTKoKHyEemWDPX4S_HyeA" name="description" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_sc9IIKHyEemWDPX4S_HyeA" name="isVisible" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_K0-84KH7EemWDPX4S_HyeA" name="any"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_4dti8KhCEemCWcziywh5pQ" name="Chart Of Account Entry">
+    <ownedAttribute xmi:id="_Bv4R4KhDEemCWcziywh5pQ" name="idChartOfAccount">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_KA-I4KhEEemCWcziywh5pQ" name="amount" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_N9pZ0KhEEemCWcziywh5pQ" name="level" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Ru6sAKhEEemCWcziywh5pQ" name="name" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_d4VU4KhEEemCWcziywh5pQ" name="description" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_M9jpgFL5EeuWyuY4q2pTog" name="formattedAmount">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_BFRfgKkQEem8MbnaxbayMQ" name="Continuous Program">
+    <ownedAttribute xmi:id="_IrbtsKkSEem8MbnaxbayMQ" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_nVm8AKkSEem8MbnaxbayMQ" name="name" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_bw0DIKkSEem8MbnaxbayMQ" name="description" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_zlKpIKkSEem8MbnaxbayMQ" name="endDate" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_7RjGAKkSEem8MbnaxbayMQ" name="partner" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_M6TscKkTEem8MbnaxbayMQ" name="target" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_UDgjwKkTEem8MbnaxbayMQ" name="logoUrl" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_oOsqsKkTEem8MbnaxbayMQ" name="Event">
+    <ownedAttribute xmi:id="_6RPDEKkTEem8MbnaxbayMQ" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_-k53sKkTEem8MbnaxbayMQ" name="name" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Ak2WMKkUEem8MbnaxbayMQ" name="description" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_CmVs0KkUEem8MbnaxbayMQ" name="eventDate" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_GnJP0KkUEem8MbnaxbayMQ" name="partner" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Ik0dcKkUEem8MbnaxbayMQ" name="target" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_J5bf8KkUEem8MbnaxbayMQ" name="logoUrl" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_r5az4LgEEemHcsB2M6Z-4Q" name="Item Donation">
+    <ownedAttribute xmi:id="_P7Z0YLgFEemHcsB2M6Z-4Q" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_R1SHILgFEemHcsB2M6Z-4Q" name="itemName" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Y-9fkLgFEemHcsB2M6Z-4Q" name="quantity" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_nd2LALgFEemHcsB2M6Z-4Q" name="idProgram" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <packagedElement xmi:type="uml:DataType" xmi:id="_tyBm0K3pEem3S5Q3cCWwGw" name="Image"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_UAWqALglEemHcsB2M6Z-4Q" name="Money Donation">
+    <ownedAttribute xmi:id="_te0ocLglEemHcsB2M6Z-4Q" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_uEPpsLglEemHcsB2M6Z-4Q" name="accountNumber" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_8BDi0LglEemHcsB2M6Z-4Q" name="amount" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Ne4roLgmEemHcsB2M6Z-4Q" name="idProgram" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_GW_-wLgtEemHcsB2M6Z-4Q" name="Confirmation">
+    <ownedAttribute xmi:id="_Xg7UILgtEemHcsB2M6Z-4Q" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Z-CPwLgtEemHcsB2M6Z-4Q" name="accountNumber" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_a6_AMLgtEemHcsB2M6Z-4Q" name="amount" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_bc_hELgtEemHcsB2M6Z-4Q" name="idProgram" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_UocAgHw6Ee2vZZTa1UHcjw" name="Operational">
+    <ownedAttribute xmi:id="_iFajAHw6Ee2vZZTa1UHcjw" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_ijXqUHw6Ee2vZZTa1UHcjw" name="name">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jGm6QHw6Ee2vZZTa1UHcjw" name="description">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EString"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_tyBm0K3pEem3S5Q3cCWwGw" name="Image"/>
+  <packagedElement xmi:type="uml:DataType" xmi:id="_pl8cAMiEEemxKOgT6hR6IA" name="Date"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_AQGiYNI3Eeq7o8gEOnMmRA" name="Donation">
+    <ownedAttribute xmi:id="_CiMg0NI3Eeq7o8gEOnMmRA" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_DlJyoNI3Eeq7o8gEOnMmRA" name="name">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <redefinedProperty href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#ETypedElement-required"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_EP28gNI3Eeq7o8gEOnMmRA" name="email">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_E9sS4NI3Eeq7o8gEOnMmRA" name="phoneNumber">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FwVQwNI3Eeq7o8gEOnMmRA" name="programId">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Gn8OMNI3Eeq7o8gEOnMmRA" name="amount">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_HdWzQNI3Eeq7o8gEOnMmRA" name="date">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_IqoesNI3Eeq7o8gEOnMmRA" name="paymentMethod">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_PKIRsNI3Eeq7o8gEOnMmRA" name="message">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_oXVHoNpTEeqr54XfIxKbcw" name="donationStatus">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_1YssMNpTEeqr54XfIxKbcw" name="donationCode">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_rLWwsOXTEeqwVK-YQmZ3yQ" name="proofOfTransferUrl" type="_tyBm0K3pEem3S5Q3cCWwGw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-qSbgOEmEeqx3qAgN8QBiA" name="ConfirmOfflineDonation">
+    <ownedAttribute xmi:id="_BLM5EOEnEeqx3qAgN8QBiA" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Ciy-IOEnEeqx3qAgN8QBiA" name="name">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_DSGUIOEnEeqx3qAgN8QBiA" name="email">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_D7Hb8OEnEeqx3qAgN8QBiA" name="phone">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_EnCGwOEnEeqx3qAgN8QBiA" name="programId">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FQBZYOEnEeqx3qAgN8QBiA" name="amount">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_F-XGEOEnEeqx3qAgN8QBiA" name="date">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Guil0OEnEeqx3qAgN8QBiA" name="paymentMethod">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_QkD5cOEnEeqx3qAgN8QBiA" name="proofOfTransfer">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_RNyy8OEnEeqx3qAgN8QBiA" name="description">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_MPRFQENGEe2osOa0fRvpkQ" name="status">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_METAMODELS/Ecore.metamodel.uml#EString"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_GRNvAEjDEe2ejsBbTIL9Lg" name="ConfirmOfflineDonationStatus">
+    <ownedAttribute xmi:id="_I83c8EjDEe2ejsBbTIL9Lg" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_iA47EEzjDEe2ejsBbTIL9Lg" name="name">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jjKI4H3mEe2VQJKU9XQKtg" name="FinancialPosition">
+    <ownedAttribute xmi:id="_neQFcH3mEe2VQJKU9XQKtg" name="name">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_0MAxgH3mEe2VQJKU9XQKtg" name="amountLastYear">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_1EClsH3mEe2VQJKU9XQKtg" name="amountTwoYearsBefore">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_-OTV0H3mEe2VQJKU9XQKtg" name="level">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_lrKXMH3mEe2VQJKU9XQKtg" name="ActivityReport">
+    <ownedAttribute xmi:id="_DN8_UH3qEe2VQJKU9XQKtg" name="name">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Dt5qsH3qEe2VQJKU9XQKtg" name="tidakTerikat">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_EKxz8H3qEe2VQJKU9XQKtg" name="terikatTemporer">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Fw1y0H3qEe2VQJKU9XQKtg" name="terikatPermanen">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_IC1DkH3qEe2VQJKU9XQKtg" name="jumlah">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_IeoOwH3qEe2VQJKU9XQKtg" name="level">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_3oDFgH-REe28PK2Td-rtXA" name="User">
+    <ownedAttribute xmi:id="_5Ykn8H-REe28PK2Td-rtXA" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_67P7oH-REe28PK2Td-rtXA" name="name">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_7304oH-REe28PK2Td-rtXA" name="allowedPermissions" type="_K0-84KH7EemWDPX4S_HyeA"/>
+    <ownedAttribute xmi:id="_9cB2UH-REe28PK2Td-rtXA" name="email">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_-jYf8H-REe28PK2Td-rtXA" name="userRolesName" type="_K0-84KH7EemWDPX4S_HyeA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_A9XPEH-SEe28PK2Td-rtXA" name="Role">
+    <ownedAttribute xmi:id="_JbAw0H-SEe28PK2Td-rtXA" name="id">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_KJ8TYH-SEe28PK2Td-rtXA" name="name">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_K-DQ4H-SEe28PK2Td-rtXA" name="allowedPermissions" type="_K0-84KH7EemWDPX4S_HyeA"/>
+  </packagedElement>
+</uml:Model>
