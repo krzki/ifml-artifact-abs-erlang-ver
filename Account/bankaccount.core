@@ -1,18 +1,46 @@
 <?xml version="1.0" encoding="ASCII"?>
 <core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:dop-extension="http://amanah.cs.ui.ac.id/ifml/dop" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_aOvbYHIDEe6978qmppegiw">
   <interactionFlowModel id="_p7KmEnIFEe6978qmppegiw" name="BankAccount">
+    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_P3xPvXIiEe6978qmppegiw" name="BankAccount">
+      <annotations text="Account"/>
+      <annotations text="isAdditional"/>
+      <viewElements xsi:type="ext:IFMLMenu" id="_c1UrJnIiEe6978qmppegiw" name="Account">
+        <annotations text="Basic Account"/>
+        <viewElementEvents id="_lQPo_HIiEe6978qmppegiw">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_mDnml3IiEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1"/>
+        </viewElementEvents>
+      </viewElements>
+      <viewElements xsi:type="ext:IFMLMenu" id="_p3GfZnIiEe6978qmppegiw" name="Overdraft">
+        <annotations text="Account With Overdraft"/>
+        <viewElementEvents id="_yjoxrHIiEe6978qmppegiw">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_zLbKZHIiEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.2/@viewElements.1"/>
+        </viewElementEvents>
+      </viewElements>
+      <viewElements xsi:type="ext:IFMLMenu" id="_FUC8tnIjEe6978qmppegiw" name="Fee">
+        <annotations text="Account With Fee"/>
+        <viewElementEvents id="_IxTGmHIjEe6978qmppegiw">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_JQSvxHIjEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.3/@viewElements.1"/>
+        </viewElementEvents>
+      </viewElements>
+      <viewElements xsi:type="ext:IFMLMenu" id="_NBxdZnIjEe6978qmppegiw" name="Interest">
+        <annotations text="Account With Interest"/>
+        <viewElementEvents id="_SkSDrHIjEe6978qmppegiw">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_TQisp3IjEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1"/>
+        </viewElementEvents>
+      </viewElements>
+    </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:ViewContainer" id="_uucu7XIFEe6978qmppegiw" name="Account" isXOR="true">
-      <viewElements xsi:type="core:ViewContainer" id="_r_-hLnIGEe6978qmppegiw" name="NewAccount" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0">
+      <viewElements xsi:type="core:ViewContainer" id="_r_-hLnIGEe6978qmppegiw" name="NewAccount" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="/account/add"/>
         <viewElements xsi:type="ext:Form" id="_yknSv3IGEe6978qmppegiw" name="Add Account">
-          <viewElementEvents id="__ft3S3IGEe6978qmppegiw" name="Submit" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.0">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_AwhXx3IHEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@actions.0"/>
+          <viewElementEvents id="__ft3S3IGEe6978qmppegiw" name="Submit" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0/@viewElements.0">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_AwhXx3IHEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1/@actions.0"/>
           </viewElementEvents>
           <viewComponentParts xsi:type="ext:SimpleField" id="_3Rss8nIGEe6978qmppegiw" name="Id Account"/>
           <viewComponentParts xsi:type="ext:SimpleField" id="_7yRVNXIGEe6978qmppegiw" name="Balance"/>
         </viewElements>
       </viewElements>
-      <viewElements xsi:type="core:ViewContainer" id="_pzYGnHIGEe6978qmppegiw" name="List Account" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@actions.0/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0" isDefault="true">
+      <viewElements xsi:type="core:ViewContainer" id="_pzYGnHIGEe6978qmppegiw" name="List Account" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@actions.0/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0" isDefault="true">
         <annotations text="/account"/>
         <viewElements xsi:type="ext:List" id="_exOLTnIHEe6978qmppegiw" name="Table Account">
           <viewComponentParts xsi:type="core:DataBinding" id="_hOOZPXIHEe6978qmppegiw" name="Account List Element" uniformResourceIdentifier="call/account/list">
@@ -21,150 +49,217 @@
           </viewComponentParts>
         </viewElements>
         <viewElements xsi:type="ext:IFMLMenu" id="_4UU8snIIEe6978qmppegiw" name="Button Add Account">
-          <viewElementEvents id="_6_2uyHIIEe6978qmppegiw" name="Tambah Account" viewElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.1">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_-d2fp3IIEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0"/>
+          <viewElementEvents id="_6_2uyHIIEe6978qmppegiw" name="Tambah Account" viewElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewElements.1">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_-d2fp3IIEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0"/>
           </viewElementEvents>
         </viewElements>
       </viewElements>
-      <actions id="_DyCoE3IHEe6978qmppegiw" name="Save Account" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <actions id="_DyCoE3IHEe6978qmppegiw" name="Save Account" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="POST Form"/>
         <parameters id="_Jbqi8nIHEe6978qmppegiw" name="id_account"/>
         <parameters id="_MOPYQnIHEe6978qmppegiw" name="balance"/>
         <actionEvents id="_NjMZCHIHEe6978qmppegiw" name="then">
-          <outInteractionFlows xsi:type="core:NavigationFlow" id="_PwG8h3IHEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1"/>
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_PwG8h3IHEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1"/>
         </actionEvents>
       </actions>
     </interactionFlowModelElements>
-    <interactionFlowModelElements xsi:type="dop-extension:Delta" id="_xpHwjnIFEe6978qmppegiw" name="Overdraft" isXOR="true" uses="//@interactionFlowModel/@interactionFlowModelElements.0">
-      <viewElements xsi:type="dop-extension:Delta" id="_2nyX2HIHEe6978qmppegiw" name="New Overdraft" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0" uses="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0">
+    <interactionFlowModelElements xsi:type="dop-extension:Delta" id="_xpHwjnIFEe6978qmppegiw" name="Overdraft" isXOR="true" uses="//@interactionFlowModel/@interactionFlowModelElements.1">
+      <viewElements xsi:type="dop-extension:Delta" id="_2nyX2HIHEe6978qmppegiw" name="New Overdraft" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.2/@viewElements.1/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0" uses="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0">
         <annotations text="/overdraft/add"/>
-        <viewElements xsi:type="dop-extension:ModifiedForm" id="_61-PjXIHEe6978qmppegiw" name="Add Account" modifies="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.0">
+        <viewElements xsi:type="dop-extension:ModifiedForm" id="_61-PjXIHEe6978qmppegiw" name="Add Account" modifies="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0/@viewElements.0">
           <viewElementEvents id="_ljb0CHIJEe6978qmppegiw" name="Submit">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_nSpu53IJEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1/@actions.0"/>
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_nSpu53IJEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.2/@actions.0"/>
           </viewElementEvents>
           <viewComponentParts xsi:type="dop-extension:AddedSimpleField" id="_WwBqFHIJEe6978qmppegiw" name="Overdraft Limit"/>
         </viewElements>
       </viewElements>
-      <viewElements xsi:type="dop-extension:Delta" id="_k1N4vHIIEe6978qmppegiw" name="List Overdraft" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@actions.0/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0" isDefault="true" uses="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1">
+      <viewElements xsi:type="dop-extension:Delta" id="_k1N4vHIIEe6978qmppegiw" name="List Overdraft" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.2/@actions.0/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0" isDefault="true" uses="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1">
         <annotations text="/overdraft"/>
-        <viewElements xsi:type="dop-extension:ModifiedList" id="_SKksinIKEe6978qmppegiw" name="Table Account" modifies="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.0">
+        <viewElements xsi:type="dop-extension:ModifiedList" id="_SKksinIKEe6978qmppegiw" name="Table Account" modifies="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewElements.0">
           <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_VGkjknIKEe6978qmppegiw" name="AccountOv List Element" uniformResourceIdentifier="call/overdraft/list">
             <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_bNVGo3IKEe6978qmppegiw" name="Overdraft Limit"/>
           </viewComponentParts>
         </viewElements>
         <viewElements xsi:type="ext:IFMLMenu" id="_e-cnw3IKEe6978qmppegiw" name="Button Add Overdraft">
           <viewElementEvents id="_lU-r2HIKEe6978qmppegiw" name="Tambah Overdraft">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_wL6ZSHIKEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0"/>
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_wL6ZSHIKEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.2/@viewElements.0"/>
           </viewElementEvents>
         </viewElements>
       </viewElements>
-      <actions id="_wBoRQ3IJEe6978qmppegiw" name="Save Overdraft" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <actions id="_wBoRQ3IJEe6978qmppegiw" name="Save Overdraft" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.2/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="POST Form"/>
         <parameters id="_GKHyUnIKEe6978qmppegiw" name="id_account"/>
         <parameters id="_KJGJVHIKEe6978qmppegiw" name="balance"/>
         <parameters id="_LfiX1HIKEe6978qmppegiw" name="overdraft_limit"/>
         <actionEvents id="_1zvkWHIKEe6978qmppegiw" name="then">
-          <outInteractionFlows xsi:type="core:NavigationFlow" id="_2i-o53IKEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1"/>
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_2i-o53IKEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.2/@viewElements.1"/>
         </actionEvents>
       </actions>
     </interactionFlowModelElements>
-    <interactionFlowModelElements xsi:type="dop-extension:Delta" id="_5-FQYXIFEe6978qmppegiw" name="Fee" isXOR="true" uses="//@interactionFlowModel/@interactionFlowModelElements.0">
-      <viewElements xsi:type="dop-extension:Delta" id="_5Zhh2HIWEe6978qmppegiw" name="New AccWithFee" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.2/@viewElements.1/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0" uses="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0">
+    <interactionFlowModelElements xsi:type="dop-extension:Delta" id="_5-FQYXIFEe6978qmppegiw" name="Fee" isXOR="true" uses="//@interactionFlowModel/@interactionFlowModelElements.1">
+      <viewElements xsi:type="dop-extension:Delta" id="_5Zhh2HIWEe6978qmppegiw" name="New AccWithFee" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.3/@viewElements.1/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0" uses="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0">
         <annotations text="/fee/add"/>
         <viewElements xsi:type="dop-extension:ModifiedForm" id="_SyxCL3IXEe6978qmppegiw" name="Add Account">
           <viewElementEvents id="_alglynIXEe6978qmppegiw" name="Submit">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_cQzCp3IXEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.2/@actions.0"/>
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_cQzCp3IXEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.3/@actions.0"/>
           </viewElementEvents>
           <viewComponentParts xsi:type="dop-extension:AddedSimpleField" id="_T4psB3IXEe6978qmppegiw" name="Fee"/>
         </viewElements>
       </viewElements>
-      <viewElements xsi:type="dop-extension:Delta" id="_6ye4-nIWEe6978qmppegiw" name="List AccWithFee" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.2/@actions.0/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0" isDefault="true" uses="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1">
+      <viewElements xsi:type="dop-extension:Delta" id="_6ye4-nIWEe6978qmppegiw" name="List AccWithFee" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.3/@actions.0/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.2/@viewElementEvents.0/@outInteractionFlows.0" isDefault="true" uses="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1">
         <annotations text="/fee"/>
-        <viewElements xsi:type="dop-extension:ModifiedList" id="_vLubqnIXEe6978qmppegiw" name="Table AccountWF" modifies="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.0">
-          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_2SRAjXIXEe6978qmppegiw" name="AccountFee List Element" uniformResourceIdentifier="call/fee/list" modifies="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.0/@viewComponentParts.0">
+        <viewElements xsi:type="dop-extension:ModifiedList" id="_vLubqnIXEe6978qmppegiw" name="Table AccountWF" modifies="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewElements.0">
+          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_2SRAjXIXEe6978qmppegiw" name="AccountFee List Element" uniformResourceIdentifier="call/fee/list" modifies="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewElements.0/@viewComponentParts.0">
             <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_9zt_83IXEe6978qmppegiw" name="Fee"/>
           </viewComponentParts>
         </viewElements>
         <viewElements xsi:type="ext:IFMLMenu" id="_BgsA43IYEe6978qmppegiw" name="Button Add FeeAccount">
           <viewElementEvents id="_FQTGCHIYEe6978qmppegiw" name="Tambah Fee">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_HP2jBHIYEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.2/@viewElements.0"/>
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_HP2jBHIYEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.3/@viewElements.0"/>
           </viewElementEvents>
         </viewElements>
       </viewElements>
-      <actions id="_etHUI3IXEe6978qmppegiw" name="Save Fee" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.2/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <actions id="_etHUI3IXEe6978qmppegiw" name="Save Fee" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.3/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="POST Form"/>
         <parameters id="_i-r2_3IXEe6978qmppegiw" name="id_account"/>
         <parameters id="_kpX3M3IXEe6978qmppegiw" name="balance"/>
         <parameters id="_mBEC0nIXEe6978qmppegiw" name="fee"/>
         <actionEvents id="_nd_T2nIXEe6978qmppegiw" name="then">
-          <outInteractionFlows xsi:type="core:NavigationFlow" id="_qYRTtHIXEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.2/@viewElements.1"/>
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_qYRTtHIXEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.3/@viewElements.1"/>
         </actionEvents>
       </actions>
     </interactionFlowModelElements>
-    <interactionFlowModelElements xsi:type="dop-extension:Delta" id="_VWi2UXIGEe6978qmppegiw" name="Interest" isXOR="true" uses="//@interactionFlowModel/@interactionFlowModelElements.0">
-      <viewElements xsi:type="dop-extension:Delta" id="_pLT0iHIbEe6978qmppegiw" name="New AccInterest" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.3/@viewElements.1/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0" uses="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0">
+    <interactionFlowModelElements xsi:type="dop-extension:Delta" id="_VWi2UXIGEe6978qmppegiw" name="Interest" isXOR="true" uses="//@interactionFlowModel/@interactionFlowModelElements.1">
+      <viewElements xsi:type="dop-extension:Delta" id="_pLT0iHIbEe6978qmppegiw" name="New AccInterest" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0" uses="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0">
         <annotations text="/interest/add"/>
-        <viewElements xsi:type="dop-extension:ModifiedForm" id="_NmhNXXIcEe6978qmppegiw" name="Add Account" modifies="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.0/@viewElements.0">
-          <viewElementEvents id="_TgTrKHIcEe6978qmppegiw" name="Submit" viewElement="//@interactionFlowModel/@interactionFlowModelElements.3/@viewElements.0/@viewElements.0">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_nLYup3IcEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.3/@actions.0"/>
+        <viewElements xsi:type="dop-extension:ModifiedForm" id="_NmhNXXIcEe6978qmppegiw" name="Add Account" modifies="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0/@viewElements.0">
+          <viewElementEvents id="_TgTrKHIcEe6978qmppegiw" name="Submit" viewElement="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewElements.0">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_nLYup3IcEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0"/>
           </viewElementEvents>
           <viewComponentParts xsi:type="dop-extension:AddedSimpleField" id="_RPBlF3IcEe6978qmppegiw" name="Interest Rate"/>
         </viewElements>
       </viewElements>
-      <viewElements xsi:type="dop-extension:Delta" id="_rFDkinIbEe6978qmppegiw" name="List AccInterest" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.3/@actions.0/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.3/@viewElementEvents.0/@outInteractionFlows.0" isDefault="true" uses="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1">
+      <viewElements xsi:type="dop-extension:Delta" id="_rFDkinIbEe6978qmppegiw" name="List AccInterest" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@actionEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.3/@viewElementEvents.0/@outInteractionFlows.0" isDefault="true" uses="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1">
         <annotations text="/interest"/>
-        <viewElements xsi:type="dop-extension:ModifiedList" id="_t3y8fHIcEe6978qmppegiw" name="Table AccInterest" modifies="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1/@viewElements.0">
+        <viewElements xsi:type="dop-extension:ModifiedList" id="_t3y8fHIcEe6978qmppegiw" name="Table AccInterest" modifies="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewElements.0">
           <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_0cvQUHIcEe6978qmppegiw" name="AccInterest List Element" uniformResourceIdentifier="call/interest/list">
             <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_B2mNQ3IdEe6978qmppegiw" name="Interest Rate"/>
           </viewComponentParts>
         </viewElements>
         <viewElements xsi:type="ext:IFMLMenu" id="_D723Q3IiEe6978qmppegiw" name="Button Add InterestAccount">
           <viewElementEvents id="_HCpCDnIiEe6978qmppegiw" name="Tambah Interest">
-            <outInteractionFlows xsi:type="core:NavigationFlow" id="_JOtQ6HIiEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.3/@viewElements.0"/>
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_JOtQ6HIiEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0"/>
           </viewElementEvents>
         </viewElements>
       </viewElements>
-      <actions id="_clKW43IcEe6978qmppegiw" name="Save Interest" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.3/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+      <actions id="_clKW43IcEe6978qmppegiw" name="Save Interest" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="POST Form"/>
         <parameters id="_jV874nIhEe6978qmppegiw" name="id_account"/>
         <parameters id="_lU5783IhEe6978qmppegiw" name="balance"/>
         <parameters id="_itBs_3IcEe6978qmppegiw" name="interest_rate"/>
         <actionEvents id="_oWBjinIhEe6978qmppegiw" name="then">
-          <outInteractionFlows xsi:type="core:NavigationFlow" id="_q0bfwXIhEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.3/@viewElements.1"/>
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_q0bfwXIhEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1"/>
         </actionEvents>
       </actions>
     </interactionFlowModelElements>
-    <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_P3xPvXIiEe6978qmppegiw" name="BankAccount">
-      <annotations text="Account"/>
-      <annotations text="isAdditional"/>
-      <viewElements xsi:type="ext:IFMLMenu" id="_c1UrJnIiEe6978qmppegiw" name="Account">
-        <annotations text="Basic Account"/>
-        <viewElementEvents id="_lQPo_HIiEe6978qmppegiw">
-          <outInteractionFlows xsi:type="core:NavigationFlow" id="_mDnml3IiEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElements.1"/>
-        </viewElementEvents>
+    <interactionFlowModelElements xsi:type="dop-extension:Delta" id="_bHA__3IGEe6978qmppegiw" name="InterestEstimation" uses="//@interactionFlowModel/@interactionFlowModelElements.1">
+      <viewElements xsi:type="dop-extension:Delta" id="_duWueHPbEe6ZJrYp0Dvong" name="New InterestEstimation" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.1/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0" uses="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0">
+        <annotations text="/interestestimation/add"/>
+        <viewElements xsi:type="dop-extension:ModifiedForm" id="_knep_XP9Ee6ZJrYp0Dvong" name="Add Account" modifies="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0/@viewElements.0">
+          <parameters xsi:type="dop-extension:AddedSimpleField" id="_sN5ow3P9Ee6ZJrYp0Dvong" name="Interest Estimation"/>
+          <viewElementEvents id="_usFiiHP9Ee6ZJrYp0Dvong" name="Submit">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_YnM5d3P-Ee6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.5/@actions.0"/>
+          </viewElementEvents>
+        </viewElements>
       </viewElements>
-      <viewElements xsi:type="ext:IFMLMenu" id="_p3GfZnIiEe6978qmppegiw" name="Overdraft">
-        <annotations text="Account With Overdraft"/>
-        <viewElementEvents id="_yjoxrHIiEe6978qmppegiw">
-          <outInteractionFlows xsi:type="core:NavigationFlow" id="_zLbKZHIiEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1"/>
-        </viewElementEvents>
+      <viewElements xsi:type="dop-extension:Delta" id="_1yUa6nP8Ee6ZJrYp0Dvong" name="List InterestEstimation" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.5/@actions.0/@actionEvents.0/@outInteractionFlows.0" uses="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1">
+        <annotations text="/interestestimation"/>
+        <viewElements xsi:type="dop-extension:ModifiedList" id="_MG0FqnP_Ee6ZJrYp0Dvong" name="Table InterestEstimation" modifies="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewElements.0">
+          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_RG5UXXP_Ee6ZJrYp0Dvong" name="InterestEstimation List Element" uniformResourceIdentifier="/call/interestEstimation/list" modifies="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewElements.0/@viewComponentParts.0">
+            <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_VuUygHP_Ee6ZJrYp0Dvong" name="Interest Estimation"/>
+          </viewComponentParts>
+        </viewElements>
+        <viewElements xsi:type="ext:IFMLMenu" id="_ea_AknP_Ee6ZJrYp0Dvong" name="Button Add InterestEstimation">
+          <viewElementEvents id="_hNrKmHP_Ee6ZJrYp0Dvong" name="Tambah InterestEstimation">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_ldrAJ3P_Ee6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.0"/>
+          </viewElementEvents>
+        </viewElements>
       </viewElements>
-      <viewElements xsi:type="ext:IFMLMenu" id="_FUC8tnIjEe6978qmppegiw" name="Fee">
-        <annotations text="Account With Fee"/>
-        <viewElementEvents id="_IxTGmHIjEe6978qmppegiw">
-          <outInteractionFlows xsi:type="core:NavigationFlow" id="_JQSvxHIjEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.2/@viewElements.1"/>
-        </viewElementEvents>
-      </viewElements>
-      <viewElements xsi:type="ext:IFMLMenu" id="_NBxdZnIjEe6978qmppegiw" name="Interest">
-        <annotations text="Account With Interest"/>
-        <viewElementEvents id="_SkSDrHIjEe6978qmppegiw">
-          <outInteractionFlows xsi:type="core:NavigationFlow" id="_TQisp3IjEe6978qmppegiw" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.3/@viewElements.1"/>
-        </viewElementEvents>
-      </viewElements>
+      <actions id="_6EC5M3P9Ee6ZJrYp0Dvong" name="Save InterestEstimation" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST"/>
+        <parameters id="_qvKH4nP_Ee6ZJrYp0Dvong" name="id_account"/>
+        <parameters id="_sdYkRHP_Ee6ZJrYp0Dvong" name="balance"/>
+        <parameters id="_twLB1HP_Ee6ZJrYp0Dvong" name="interest_estimation"/>
+        <actionEvents id="_wK6l-nP_Ee6ZJrYp0Dvong" name="then">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_x6efF3P_Ee6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.1"/>
+        </actionEvents>
+      </actions>
     </interactionFlowModelElements>
-    <interactionFlowModelElements xsi:type="dop-extension:Delta" id="_bHA__3IGEe6978qmppegiw" name="InterestEstimation" uses="//@interactionFlowModel/@interactionFlowModelElements.0"/>
-    <interactionFlowModelElements xsi:type="dop-extension:Delta" id="_eABNkXIGEe6978qmppegiw" name="CreditWorthiness" uses="//@interactionFlowModel/@interactionFlowModelElements.0"/>
-    <interactionFlowModelElements xsi:type="dop-extension:Delta" id="_hFqI0XIGEe6978qmppegiw" name="DailyLimit" uses="//@interactionFlowModel/@interactionFlowModelElements.0"/>
+    <interactionFlowModelElements xsi:type="dop-extension:Delta" id="_eABNkXIGEe6978qmppegiw" name="CreditWorthiness" uses="//@interactionFlowModel/@interactionFlowModelElements.1">
+      <viewElements xsi:type="dop-extension:Delta" id="_MTZTqHQAEe6ZJrYp0Dvong" name="New CreditWorthiness" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0" uses="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0">
+        <annotations text="/creditworthiness/add"/>
+        <viewElements xsi:type="dop-extension:ModifiedForm" id="_sR3bbXQAEe6ZJrYp0Dvong" name="Add Account" modifies="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0/@viewElements.0">
+          <viewElementEvents id="_wRQCCHQAEe6ZJrYp0Dvong" name="Submit">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_yvjQd3QAEe6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.6/@actions.0"/>
+          </viewElementEvents>
+        </viewElements>
+      </viewElements>
+      <viewElements xsi:type="dop-extension:Delta" id="_hu_SqnQAEe6ZJrYp0Dvong" name="List CreditWorthiness" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.6/@actions.0/@actionEvents.0/@outInteractionFlows.0">
+        <annotations text="/creditworthiness"/>
+        <viewElements xsi:type="dop-extension:ModifiedList" id="_ZZYdCnQBEe6ZJrYp0Dvong" name="Table CreditWorthiness" modifies="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewElements.0">
+          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_EGDM3XQCEe6ZJrYp0Dvong" name="CreditWorthiness List Element" uniformResourceIdentifier="/call/creditworthiness/list" modifies="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewElements.0/@viewComponentParts.0">
+            <visualizationAttribute xsi:type="dop-extension:AddedVisualizationAttribute" id="_N7Uo2XQCEe6ZJrYp0Dvong" name="Credit Worthiness"/>
+          </viewComponentParts>
+        </viewElements>
+        <viewElements xsi:type="ext:IFMLMenu" id="_e-P-UnQCEe6ZJrYp0Dvong" name="Button Add CreditWorthiness">
+          <viewElementEvents id="_h-2oiHQCEe6ZJrYp0Dvong" name="Tambah CreditWorthiness">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_kusS53QCEe6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.0"/>
+          </viewElementEvents>
+        </viewElements>
+      </viewElements>
+      <actions id="_0FqH03QAEe6ZJrYp0Dvong" name="Save CreditWorthiness" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST"/>
+        <parameters id="_qzuXcnQCEe6ZJrYp0Dvong" name="id_account"/>
+        <parameters id="_sRzfBHQCEe6ZJrYp0Dvong" name="balance"/>
+        <parameters id="_t8jJlHQCEe6ZJrYp0Dvong" name="credit_worthiness"/>
+        <actionEvents id="_wQ8OGnQCEe6ZJrYp0Dvong" name="then">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_yR-Rt3QCEe6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1"/>
+        </actionEvents>
+      </actions>
+    </interactionFlowModelElements>
+    <interactionFlowModelElements xsi:type="dop-extension:Delta" id="_hFqI0XIGEe6978qmppegiw" name="DailyLimit" uses="//@interactionFlowModel/@interactionFlowModelElements.1">
+      <viewElements xsi:type="dop-extension:Delta" id="_O_keqHQDEe6ZJrYp0Dvong" name="New DailyLimit" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.1/@viewElements.1/@viewElementEvents.0/@outInteractionFlows.0" uses="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0">
+        <annotations text="/dailylimit/add"/>
+        <viewElements xsi:type="dop-extension:ModifiedForm" id="_1svBHXQFEe6ZJrYp0Dvong" name="Add Account" modifies="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.0/@viewElements.0">
+          <parameters xsi:type="dop-extension:AddedSimpleField" id="_e0SXw3QHEe6ZJrYp0Dvong" name="Daily Limit"/>
+          <viewElementEvents id="_BlleWHQGEe6ZJrYp0Dvong" name="Submit">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_HyIDp3QHEe6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@actions.0"/>
+          </viewElementEvents>
+        </viewElements>
+      </viewElements>
+      <viewElements xsi:type="dop-extension:Delta" id="_2sSrqnQDEe6ZJrYp0Dvong" name="List DailyLimit" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@actions.0/@actionEvents.0/@outInteractionFlows.0" uses="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1">
+        <annotations text="/dailylimit"/>
+        <viewElements xsi:type="dop-extension:ModifiedList" id="__arbKnQHEe6ZJrYp0Dvong" name="Table DailyLimit">
+          <viewComponentParts xsi:type="dop-extension:ModifiedDataBinding" id="_coLQHXQIEe6ZJrYp0Dvong" name="DailyLimit List Element" modifies="//@interactionFlowModel/@interactionFlowModelElements.1/@viewElements.1/@viewElements.0/@viewComponentParts.0">
+            <subViewComponentParts xsi:type="dop-extension:AddedVisualizationAttribute" id="_f24n0HQIEe6ZJrYp0Dvong" name="Daily Limit"/>
+          </viewComponentParts>
+        </viewElements>
+        <viewElements xsi:type="ext:IFMLMenu" id="_o2_9YnQIEe6ZJrYp0Dvong" name="Button Add DailyLimit">
+          <viewElementEvents id="_rpJ76HQIEe6ZJrYp0Dvong" name="Tambah DailyLimit">
+            <outInteractionFlows xsi:type="core:NavigationFlow" id="_uayWB3QIEe6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.0"/>
+          </viewElementEvents>
+        </viewElements>
+      </viewElements>
+      <actions id="_6DwWtXQDEe6ZJrYp0Dvong" name="Save DailyLimit" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
+        <annotations text="POST"/>
+        <parameters id="_5wx94nQIEe6ZJrYp0Dvong" name="id_account"/>
+        <parameters id="_7bBSJHQIEe6ZJrYp0Dvong" name="balance"/>
+        <parameters id="_-DB2NHQIEe6ZJrYp0Dvong" name="daily_limit"/>
+        <actionEvents id="__kRminQIEe6ZJrYp0Dvong" name="then">
+          <outInteractionFlows xsi:type="core:NavigationFlow" id="_DfgF93QJEe6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.1"/>
+        </actionEvents>
+      </actions>
+    </interactionFlowModelElements>
   </interactionFlowModel>
   <domainModel id="_aOvbYXIDEe6978qmppegiw">
     <domainElements xsi:type="core:UMLStructuralFeature" id="_aO5zcHIDEe6978qmppegiw" name="account">
