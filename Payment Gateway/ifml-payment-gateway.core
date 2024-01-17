@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ASCII"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <core:IFMLModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://www.omg.org/spec/20130218/core" xmlns:ext="http://www.omg.org/spec/20130218/ext" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" id="_U7mqIFOAEe6RN_2PvgwO2w">
   <interactionFlowModel id="_aohJoFOAEe6RN_2PvgwO2w">
     <interactionFlowModelElements xsi:type="ext:IFMLMenu" id="_sOVw0FOAEe6RN_2PvgwO2w" name="PaymentLink" isLandmark="true">
@@ -27,8 +27,10 @@
     </interactionFlowModelElements>
     <interactionFlowModelElements xsi:type="core:ViewContainer" id="_aoq6oFOAEe6RN_2PvgwO2w" name="PaymentLink" isXOR="true">
       <viewElements xsi:type="core:ViewContainer" id="_pM9DcFOAEe6RN_2PvgwO2w" name="PaymentLink Form" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.0/@viewElementEvents.0/@outInteractionFlows.0" isDefault="true">
-        <annotations text="/paymentlink"/>
+        <annotations text="/paymentlink/:id"/>
         <viewElements xsi:type="ext:Form" id="_vrt2oFOAEe6RN_2PvgwO2w" name="Payment Link Form">
+          <parameters id="_XESxEqeXEe6WnM0_J0eMag" name="Id" direction="inout"/>
+          <parameters id="_6zJEMqiJEe6BeNvHyi1WIw" name="Data" direction="out"/>
           <viewElementEvents xsi:type="ext:OnSubmitEvent" id="_RgZkEFedEe68M9yXchFBKQ" name="Kirim">
             <outInteractionFlows xsi:type="core:NavigationFlow" id="_maAawFeeEe68M9yXchFBKQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0">
               <parameterBindingGroup id="_y-t4gleeEe68M9yXchFBKQ">
@@ -54,14 +56,17 @@
             <subViewComponentParts xsi:type="ext:IFMLSlot" id="_2Xl_IFOIEe6RN_2PvgwO2w" name="product_name" direction="out"/>
             <subViewComponentParts xsi:type="ext:IFMLSlot" id="_5Vrg4FOIEe6RN_2PvgwO2w" name="Midtrans"/>
             <subViewComponentParts xsi:type="ext:IFMLSlot" id="_UI0MA1q3Ee68M9yXchFBKQ" name="Oy"/>
+            <subViewComponentParts xsi:type="ext:IFMLSlot" id="_gAX_0KieEe6BeNvHyi1WIw" name="Flip"/>
           </viewComponentParts>
+          <viewComponentParts xsi:type="core:DataBinding" id="_9mgjvaiJEe6BeNvHyi1WIw" name="Object Payment" uniformResourceIdentifier="call/paymentlink/detail"/>
         </viewElements>
       </viewElements>
       <viewElements xsi:type="core:ViewContainer" id="_NbstoFefEe68M9yXchFBKQ" name="Konfirmasi Payment Link Page" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@actionEvents.0/@outInteractionFlows.0">
-        <annotations text="/paymentlink/confirmation"/>
+        <annotations text="/paymentlink/confirmation/:id"/>
         <viewElements xsi:type="ext:Details" id="_ozZekFefEe68M9yXchFBKQ" name="Konfirmasi Payment Link">
           <parameters id="_ou4VgFegEe68M9yXchFBKQ" name="Data" direction="out"/>
-          <viewComponentParts xsi:type="core:DataBinding" id="_NZ0B0FegEe68M9yXchFBKQ" name="data">
+          <parameters id="_uviIYaiJEe6BeNvHyi1WIw" name="Id" direction="inout"/>
+          <viewComponentParts xsi:type="core:DataBinding" id="_NZ0B0FegEe68M9yXchFBKQ" name="Payment Link Data" uniformResourceIdentifier="call/paymentlink/get_payment_link">
             <subViewComponentParts xsi:type="core:VisualizationAttribute" id="_Pb084FegEe68M9yXchFBKQ" name="Mohon selesaikan pembayaran di link berikut" featureConcept="//@domainModel/@domainElements.2"/>
           </viewComponentParts>
         </viewElements>
@@ -69,15 +74,14 @@
       <actions id="_WFBl0FedEe68M9yXchFBKQ" name="Paymentlink" inInteractionFlows="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0 //@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.0/@viewElements.0/@viewElementEvents.0/@outInteractionFlows.0">
         <annotations text="POST "/>
         <parameters id="_0jeFQFedEe68M9yXchFBKQ" name="amount"/>
-        <parameters id="_DQHf4FeeEe68M9yXchFBKQ" name="id"/>
+        <parameters id="_DQHf4FeeEe68M9yXchFBKQ" name="id" direction="out"/>
         <parameters id="_D6Oz4FeeEe68M9yXchFBKQ" name="paymentLink"/>
         <parameters id="_FZm78FeeEe68M9yXchFBKQ" name="sender_name"/>
         <parameters id="_ULwhoFeeEe68M9yXchFBKQ" name="product_name"/>
-        <parameters id="_YVJY4FeeEe68M9yXchFBKQ" name="data"/>
         <actionEvents id="_L2ki4FefEe68M9yXchFBKQ" name="then">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_kP2lcFegEe68M9yXchFBKQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1">
             <parameterBindingGroup id="_uSdS0legEe68M9yXchFBKQ">
-              <parameterBindings id="_u2gbElegEe68M9yXchFBKQ" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@parameters.5" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewElements.0/@parameters.0"/>
+              <parameterBindings id="_u2gbElegEe68M9yXchFBKQ" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@parameters.1" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewElements.0/@parameters.1"/>
             </parameterBindingGroup>
           </outInteractionFlows>
         </actionEvents>
@@ -133,7 +137,7 @@
         <actionEvents id="_7cYb2FezEe68M9yXchFBKQ" name="then">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_R3Qtd1e0Ee68M9yXchFBKQ" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.5/@viewElements.1">
             <parameterBindingGroup id="_a-Knkle0Ee68M9yXchFBKQ">
-              <parameterBindings id="_b3pNQle0Ee68M9yXchFBKQ" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@parameters.5" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewElements.0/@parameters.0"/>
+              <parameterBindings id="_b3pNQle0Ee68M9yXchFBKQ" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewElements.0/@parameters.0"/>
             </parameterBindingGroup>
           </outInteractionFlows>
         </actionEvents>
@@ -183,7 +187,7 @@
         <actionEvents id="_2pBZ-HIfEe6ZJrYp0Dvong" name="then">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_5UuyR3IfEe6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.6/@viewElements.1">
             <parameterBindingGroup id="_6RofYnIfEe6ZJrYp0Dvong">
-              <parameterBindings id="_6xVTInIfEe6ZJrYp0Dvong" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@parameters.5" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewElements.0/@parameters.0"/>
+              <parameterBindings id="_6xVTInIfEe6ZJrYp0Dvong" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewElements.0/@parameters.0"/>
             </parameterBindingGroup>
           </outInteractionFlows>
         </actionEvents>
@@ -233,7 +237,7 @@
         <actionEvents id="_bTrHuHJGEe6ZJrYp0Dvong" name="then">
           <outInteractionFlows xsi:type="core:NavigationFlow" id="_fD87Z3JGEe6ZJrYp0Dvong" targetInteractionFlowElement="//@interactionFlowModel/@interactionFlowModelElements.7/@viewElements.1">
             <parameterBindingGroup id="_hUSmUnJGEe6ZJrYp0Dvong">
-              <parameterBindings id="_h0izsnJGEe6ZJrYp0Dvong" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewElements.0/@parameters.0" targetParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@actions.0/@parameters.5"/>
+              <parameterBindings id="_h0izsnJGEe6ZJrYp0Dvong" sourceParameter="//@interactionFlowModel/@interactionFlowModelElements.4/@viewElements.1/@viewElements.0/@parameters.0"/>
             </parameterBindingGroup>
           </outInteractionFlows>
         </actionEvents>
